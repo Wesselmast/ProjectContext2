@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    [SerializeField] private float speed;
     [SerializeField] private Transform character;
+    [SerializeField] private WingDetection self, gun;
 
     private Grid grid;
 
@@ -15,16 +15,17 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Rotate(Direction dir) {
-        character.localEulerAngles += dir == Direction.Left ?
-                                      new Vector3(0, 90, 0) :
-                                      new Vector3(0, -90, 0);
+        if (dir == Direction.Left && (self.LocalLeft && gun.LocalLeft)) {
+            character.eulerAngles -= Vector3.up * 90;
+        }
+        else if (dir == Direction.Right && (self.LocalRight && gun.LocalRight)) {
+            character.eulerAngles += Vector3.up * 90;
+        }
     }
-
     private void Update() {
-
-        //Collider[] cols = Physics.OverlapBox(transform.position, transform.localScale, Quaternion.identity);
-        //foreach (Collider c in cols) Debug.Log(c.name);
-        Vector3 moveTo =  grid.GetGridPoint(new Vector3(-PlayerInput.Vertical, 0, PlayerInput.Horizontal));
-        transform.position += moveTo;
+        if (gun.Forward && self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
+        if (gun.Back && self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
+        if (gun.Left && self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
+        if (gun.Right && self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
     }
 }

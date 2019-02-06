@@ -21,8 +21,12 @@ namespace ContextInput {
             if (Input.GetKeyDown(KeyCode.Mouse1)) OnRightClick();
             if (Input.GetKeyDown(KeyCode.Q)) Rotate(Direction.Left);
             if (Input.GetKeyDown(KeyCode.E)) Rotate(Direction.Right);
-            Horizontal = Input.GetAxis("Horizontal");
-            Vertical =  Input.GetAxis("Vertical");
+            if (Input.GetKeyDown(KeyCode.A)) Horizontal = -1;
+            else if (Input.GetKeyDown(KeyCode.D)) Horizontal = 1;
+            else Horizontal = 0;
+            if (Input.GetKeyDown(KeyCode.W)) Vertical = 1;
+            else if (Input.GetKeyDown(KeyCode.S)) Vertical = -1;
+            else Vertical = 0;
             MousePosition = Input.mousePosition;
         }
     }

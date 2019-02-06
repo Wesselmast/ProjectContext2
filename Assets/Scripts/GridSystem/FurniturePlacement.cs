@@ -16,9 +16,8 @@ public class FurniturePlacement : MonoBehaviour {
     }
 
     private void Place() {
-        RaycastHit hitInfo;
-        if (Physics.Raycast(cam.ScreenPointToRay(PlayerInput.MousePosition), out hitInfo)) {
-            if (hitInfo.transform == grid.transform) {
+        if (Physics.Raycast(cam.ScreenPointToRay(PlayerInput.MousePosition), out RaycastHit hitInfo)) {
+            if (hitInfo.collider.tag == "Grid") {
                 Instantiate(furniturePrefab, grid.GetGridPoint(hitInfo.point) + placementOffset, Quaternion.identity);
             }
             else if (hitInfo.collider.tag == "Furniture") {
