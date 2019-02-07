@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
-    public int cost;
+    public int cost;  
 
-    private bool isTriggered;
 
-    public Vector3 spawnOffSet;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        isTriggered = false;
 
-        if (spawnOffSet == Vector3.zero)
-            spawnOffSet = new Vector3(1, 0, 0);
 
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -26,22 +18,8 @@ public class Furniture : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void ChangeMaterial(Material mat)
     {
-        if (other.CompareTag("Ground")) return;
-        Debug.Log("TriggerEnter with " + other.tag);
-        isTriggered = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ground")) return;
-
-        isTriggered = false;
-    }
-
-    public bool GetTriggered()
-    {
-        return isTriggered;
+        transform.GetChild(0).GetComponent<MeshRenderer>().material = mat;
     }
 }
