@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7755508361888881669}
   - component: {fileID: 7755508361888881674}
   m_Layer: 0
-  m_Name: Chair
+  m_Name: Shower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1
-  customName: Chair
-  isDone: 0
 --- !u!1 &7755508361945232555
 GameObject:
   m_ObjectHideFlags: 0

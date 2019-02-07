@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CostText : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class CostText : MonoBehaviour {
+
+    [SerializeField] private float maxMaterial;
+    private Slider slider;
+    private static float currentMaterial;
+    private Text text;
+
+    private void Awake() {
+        slider = transform.parent.GetComponent<Slider>();
+        text = GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        float temp = 10 - transform.parent.GetComponent<Slider>().value;
-        GetComponent<Text>().text = temp.ToString();
+    private void Update() {
+        currentMaterial = maxMaterial - slider.value;
+        text.text = currentMaterial.ToString();
+    }
+
+    public static float GetCurrentMaterial() {
+        return currentMaterial;
     }
 }
