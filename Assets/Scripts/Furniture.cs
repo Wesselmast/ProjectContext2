@@ -1,25 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
-    public int cost;  
+    public int cost;
+    public string customName;
+    public bool isDone = false;
 
-
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ChangeMaterial(Material mat)
-    {
+    public void ChangeMaterial(Material mat) {
         transform.GetChild(0).GetComponent<MeshRenderer>().material = mat;
     }
 }
