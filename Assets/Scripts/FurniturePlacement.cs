@@ -31,8 +31,9 @@ public class FurniturePlacement : MonoBehaviour
         {
             if (!furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered())
             {
+                Debug.Log("Blue");
                 furniturePrefab.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (Input.GetKeyDown(KeyCode.Space) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
+                if (Input.GetKeyDown(KeyCode.P) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
                 {
                     GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
                     obj.GetComponent<Furniture>().ChangeMaterial(originalMat);
@@ -40,10 +41,13 @@ public class FurniturePlacement : MonoBehaviour
                     obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
                     costBar.value += obj.GetComponent<Furniture>().cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
+
+                    Destroy(furniturePrefab);
                 }
             }
             else
             {
+                Debug.Log("Red");
                 furniturePrefab.GetComponent<Furniture>().ChangeMaterial(disabledMat);
             }
         }
@@ -68,6 +72,8 @@ public class FurniturePlacement : MonoBehaviour
 
     public void LoadFurnitureFromMenu(GameObject obj)
     {
+        Destroy(furniturePrefab);
+
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
         furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
         furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
