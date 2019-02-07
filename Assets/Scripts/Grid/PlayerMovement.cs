@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    [SerializeField] private Transform character;
     [SerializeField] private WingDetection self, gun;
 
     private Grid grid;
@@ -16,10 +15,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Rotate(Direction dir) {
         if (dir == Direction.Left && (self.LocalLeft && gun.LocalLeft)) {
-            character.eulerAngles -= Vector3.up * 90;
+            transform.eulerAngles -= Vector3.up * 90;
         }
         else if (dir == Direction.Right && (self.LocalRight && gun.LocalRight)) {
-            character.eulerAngles += Vector3.up * 90;
+            transform.eulerAngles += Vector3.up * 90;
         }
     }
     private void Update() {

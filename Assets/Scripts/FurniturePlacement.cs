@@ -16,9 +16,6 @@ public class FurniturePlacement : MonoBehaviour
 
     private Transform furnitureStructureTrans;
 
-    [SerializeField] private LayerMask walls;
-    [SerializeField] private LayerMask defaultLayer;
-
     private Grid grid;
     private Camera cam;
 
@@ -34,22 +31,22 @@ public class FurniturePlacement : MonoBehaviour
     {
         if (furniturePrefab != null)
         {
-            if (!furniturePrefab.GetComponent<Furniture>().GetTriggered())
+            if (!furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered())
             {
-                furniturePrefab.GetComponent<MeshRenderer>().material = blueprintMat;
+                furniturePrefab.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
-                    obj.GetComponent<MeshRenderer>().material = originalMat;
-                    obj.GetComponent<Collider>().isTrigger = false;
-                    obj.layer = walls;
+                    obj.GetComponent<Furniture>().ChangeMaterial(originalMat);
+                    obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
+                    obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
                     costBar.value += obj.GetComponent<Furniture>().cost;
-                    Destroy(furniturePrefab);
+                    Destroy(obj);
                 }
             }
             else
             {
-                furniturePrefab.GetComponent<MeshRenderer>().material = disabledMat;
+                furniturePrefab.GetComponent<Furniture>().ChangeMaterial(disabledMat);
             }
         }
     }
@@ -74,10 +71,10 @@ public class FurniturePlacement : MonoBehaviour
     public void LoadFurnitureFromMenu(GameObject obj)
     {
         Destroy(furniturePrefab);
-        Debug.Log("Blueprints position : " + furnitureStructureTrans.position);
+        
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
         furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
-        furniturePrefab.layer = defaultLayer;
+        furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
         //furniturePrefab.transform.position = obj.GetComponent<Furniture>().offset;
     }
 
