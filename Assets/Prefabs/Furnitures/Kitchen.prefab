@@ -435,6 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2
+  customName: Kitchen
+  isDone: 0
 --- !u!1 &7509243857804237676
 GameObject:
   m_ObjectHideFlags: 0

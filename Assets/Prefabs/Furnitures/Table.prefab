@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 3
+  customName: Table
+  isDone: 0
 --- !u!1 &8105554042309045033
 GameObject:
   m_ObjectHideFlags: 0

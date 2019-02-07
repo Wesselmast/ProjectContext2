@@ -1165,7 +1165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76efa208f944dff4eb3202fcfc03fe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   costBar: {fileID: 1546773911}
   furniturePrefab: {fileID: 8604569898750146139, guid: 4c91616f08701f04abf934161d2cc88b,
     type: 3}
@@ -1256,7 +1255,6 @@ Transform:
 --- !u!1 &1280782272
 =======
 --- !u!1 &1074529783
->>>>>>> master
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
