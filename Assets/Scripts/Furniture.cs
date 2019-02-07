@@ -8,10 +8,16 @@ public class Furniture : MonoBehaviour
 
     private bool isTriggered;
 
+    public Vector3 spawnOffSet;
+
     // Start is called before the first frame update
     void Start()
     {
         isTriggered = false;
+
+        if (spawnOffSet == Vector3.zero)
+            spawnOffSet = new Vector3(1, 0, 0);
+
     }
 
     // Update is called once per frame
