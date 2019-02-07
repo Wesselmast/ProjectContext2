@@ -40,7 +40,5 @@ public class PlayerMovement : MonoBehaviour {
             if (self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
 
         }
-
-
     }
 }
