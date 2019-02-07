@@ -36,7 +36,7 @@ public class FurniturePlacement : MonoBehaviour
                 furniturePrefab.GetComponent<MeshRenderer>().material = blueprintMat;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
+                    GameObject obj = Instantiate(furniturePrefab, grid.GetGridPoint(furniturePrefab.transform.position), furniturePrefab.transform.rotation);
                     obj.GetComponent<MeshRenderer>().material = originalMat;
                     obj.GetComponent<Collider>().isTrigger = false;
                     Destroy(furniturePrefab);
