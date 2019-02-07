@@ -19,13 +19,13 @@ namespace ContextInput {
         private void Update() {
             if (Input.GetKeyDown(KeyCode.Mouse0)) OnLeftClick();
             if (Input.GetKeyDown(KeyCode.Mouse1)) OnRightClick();
-            if (Input.GetKeyDown(KeyCode.Q)) Rotate(Direction.Left);
-            if (Input.GetKeyDown(KeyCode.E)) Rotate(Direction.Right);
-            if (Input.GetKeyDown(KeyCode.A)) Horizontal = -1;
-            else if (Input.GetKeyDown(KeyCode.D)) Horizontal = 1;
+            if (Input.GetKeyDown(KeyCode.R)) Rotate(Direction.Left);
+            if (Input.GetKeyDown(KeyCode.Y)) Rotate(Direction.Right);
+            if (Input.GetKeyDown(KeyCode.F)) Horizontal = -1;
+            else if (Input.GetKeyDown(KeyCode.H)) Horizontal = 1;
             else Horizontal = 0;
-            if (Input.GetKeyDown(KeyCode.W)) Vertical = 1;
-            else if (Input.GetKeyDown(KeyCode.S)) Vertical = -1;
+            if (Input.GetKeyDown(KeyCode.T)) Vertical = 1;
+            else if (Input.GetKeyDown(KeyCode.G)) Vertical = -1;
             else Vertical = 0;
             MousePosition = Input.mousePosition;
         }
