@@ -16,6 +16,9 @@ public class FurniturePlacement : MonoBehaviour
 
     private Transform furnitureStructureTrans;
 
+    [SerializeField] private LayerMask walls;
+    [SerializeField] private LayerMask defaultLayer;
+
     private Grid grid;
     private Camera cam;
 
@@ -36,9 +39,11 @@ public class FurniturePlacement : MonoBehaviour
                 furniturePrefab.GetComponent<MeshRenderer>().material = blueprintMat;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    GameObject obj = Instantiate(furniturePrefab, grid.GetGridPoint(furniturePrefab.transform.position), furniturePrefab.transform.rotation);
+                    GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
                     obj.GetComponent<MeshRenderer>().material = originalMat;
                     obj.GetComponent<Collider>().isTrigger = false;
+                    obj.layer = walls;
+                    costBar.value += obj.GetComponent<Furniture>().cost;
                     Destroy(furniturePrefab);
                 }
             }
@@ -71,7 +76,8 @@ public class FurniturePlacement : MonoBehaviour
         Destroy(furniturePrefab);
         Debug.Log("Blueprints position : " + furnitureStructureTrans.position);
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
-        furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0));
+        furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
+        furniturePrefab.layer = defaultLayer;
         //furniturePrefab.transform.position = obj.GetComponent<Furniture>().offset;
     }
 
