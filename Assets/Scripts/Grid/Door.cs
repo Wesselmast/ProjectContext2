@@ -12,8 +12,14 @@ public class Door : MonoBehaviour {
     [SerializeField] private string nextLevel;
 
     private bool isComplete = false;
+    private FurniturePlacement placement;
 
     public static List<string> currentFurnitures = new List<string>();
+
+    private void Awake() {
+        placement = player.GetComponent<FurniturePlacement>();
+        currentFurnitures.Clear();
+    }
 
     private void Update() {
         /*
@@ -23,10 +29,10 @@ public class Door : MonoBehaviour {
                 currentFurnitures[i].isDone = true;
             }
         }*/
-        if(CompareLists<string>(requiredFurnitures, currentFurnitures)) { 
+        if (CompareLists(requiredFurnitures, currentFurnitures)) {
             isComplete = true;
             weapon.SetActive(false);
-            player.GetComponent<FurniturePlacement>().enabled = false;
+            placement.enabled = false;
         }
     }
 
@@ -70,8 +76,6 @@ public class Door : MonoBehaviour {
 
     IEnumerator FadeOut() {
         fader.Play("FadeOut");
-        player.GetComponent<FurniturePlacement>().enabled = true;
-        weapon.SetActive(true);
         yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene(nextLevel);
     }
