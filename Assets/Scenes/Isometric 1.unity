@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 264409355}
   - component: {fileID: 264409354}
   - component: {fileID: 264409353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 325069802}
   - component: {fileID: 325069801}
   - component: {fileID: 325069800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 1613250305}
   - component: {fileID: 1613250304}
   - component: {fileID: 1613250303}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 1670583429}
   - component: {fileID: 1670583428}
   - component: {fileID: 1670583427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,6 +1294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4799839906945918343, guid: e2fd29e8710770a4085d98b3cc02561f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4799839905300668089, guid: e2fd29e8710770a4085d98b3cc02561f,
         type: 3}
       propertyPath: costBar
@@ -1354,9 +1359,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4799839905842977099, guid: e2fd29e8710770a4085d98b3cc02561f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4799839905300668088, guid: e2fd29e8710770a4085d98b3cc02561f, type: 3}
+    - {fileID: 0}
     - {fileID: 4799839905300668093, guid: e2fd29e8710770a4085d98b3cc02561f, type: 3}
+    - {fileID: 4799839905300668088, guid: e2fd29e8710770a4085d98b3cc02561f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2fd29e8710770a4085d98b3cc02561f, type: 3}
 --- !u!4 &4799839905987339017 stripped
 Transform:
