@@ -41,7 +41,7 @@ public class FurniturePlacement : MonoBehaviour
                     obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
                     obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
                     costBar.value += obj.GetComponent<Furniture>().cost;
-                    Destroy(obj);
+                    Destroy(furniturePrefab);
                 }
             }
             else
@@ -71,7 +71,7 @@ public class FurniturePlacement : MonoBehaviour
     public void LoadFurnitureFromMenu(GameObject obj)
     {
         Destroy(furniturePrefab);
-        
+
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
         furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
         furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
