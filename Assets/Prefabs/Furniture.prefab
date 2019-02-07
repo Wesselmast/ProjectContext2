@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8604569898750146137}
   - component: {fileID: 8604569898750146138}
   - component: {fileID: 8604569898750146134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 93c6d013127c18c4b9d2bcc12ddb6c37, type: 2}
+  - {fileID: 2100000, guid: 9adb8fec424a0b947bcd896e6e7bc743, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
