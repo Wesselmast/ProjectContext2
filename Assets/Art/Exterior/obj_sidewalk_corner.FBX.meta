@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 501f9297a9fb863418dbea5f3fc837d4
+guid: b2b04a8b22b632149b49b51a2715460b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: 01 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_placeholder_flat_2x2_sqaure_tall
+    4300000: obj_sidewalk_corner
   externalObjects: {}
   materials:
     importMaterials: 1

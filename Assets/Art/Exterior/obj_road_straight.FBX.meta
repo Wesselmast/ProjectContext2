@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: 1f035175dcbe74c498ad5b9c84e9f850
+guid: 9e106f2db29b8e543a39e2077636423a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 01 - Default
+    2100000: 'Material #33'
+    2100002: 01 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_placeholder_flat_2x2_cornered
+    4300000: obj_road_straight
   externalObjects: {}
   materials:
     importMaterials: 1

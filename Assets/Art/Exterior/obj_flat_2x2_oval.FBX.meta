@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: e2185df3930e3f841a0ac334a6cd4eff
+guid: 7db1b96f3f5831647b9eb4dc3e4a93f7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: 'Material #35'
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_couch_3x1
+    4300000: obj_flat_2x2_oval
   externalObjects: {}
   materials:
     importMaterials: 1
