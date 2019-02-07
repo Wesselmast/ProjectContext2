@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1
+  customName: Chair
+  isDone: 0
 --- !u!1 &7755508361945232555
 GameObject:
   m_ObjectHideFlags: 0

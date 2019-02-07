@@ -8,8 +8,4 @@ public class FurnitureBlueprint : MonoBehaviour {
     void Start() {
         transform.GetChild(1).GetComponent<Text>().text = cost.ToString();
     }
-
-    public float GetCost() {
-        return cost;
-    }
 }

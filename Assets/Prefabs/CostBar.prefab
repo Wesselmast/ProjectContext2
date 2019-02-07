@@ -305,7 +305,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 2
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20373650851978f40b92e44857fb853c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMaterial: 10
 --- !u!1 &5265045290572696861
 GameObject:
   m_ObjectHideFlags: 0

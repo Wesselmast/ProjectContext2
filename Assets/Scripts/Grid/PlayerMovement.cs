@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour {
     private void Awake() {
         grid = FindObjectOfType<Grid>();
         PlayerInput.Rotate += Rotate;
+        PlayerInput.Reset += Reset;
+    }
+
+    private void Reset() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     private void Rotate(Direction dir) {
@@ -22,9 +27,20 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
     private void Update() {
-        if (gun.Forward && self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
-        if (gun.Back && self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
-        if (gun.Left && self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
-        if (gun.Right && self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
+        if (gun.gameObject.activeInHierarchy) {
+            if (gun.Forward && self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
+            if (gun.Back && self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
+            if (gun.Left && self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
+            if (gun.Right && self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
+        }
+        else {
+            if (self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
+            if (self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
+            if (self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
+            if (self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
+
+        }
+
+
     }
 }

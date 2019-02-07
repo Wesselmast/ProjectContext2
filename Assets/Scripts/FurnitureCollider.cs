@@ -7,8 +7,7 @@ public class FurnitureCollider : MonoBehaviour
     private bool isTriggered;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         isTriggered = false;
 
     }
