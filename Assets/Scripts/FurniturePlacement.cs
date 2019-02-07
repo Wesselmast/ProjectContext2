@@ -41,7 +41,7 @@ public class FurniturePlacement : MonoBehaviour
                     obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
                     obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
                     costBar.value += obj.GetComponent<Furniture>().cost;
-                    Destroy(furniturePrefab);
+                    Destroy(obj);
                 }
             }
             else
