@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4799839905300668092}
-  - component: {fileID: 4799839905300668089}
   - component: {fileID: 4799839905300668093}
   - component: {fileID: 4799839905300668088}
   - component: {fileID: 4799839905300668071}
@@ -35,22 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4799839905300668089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4799839905300668070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d1d254a42f661499a52a1a6fcf0b17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costBar: {fileID: 0}
-  furniturePrefab: {fileID: 0}
-  blueprintMat: {fileID: 2100000, guid: 9adb8fec424a0b947bcd896e6e7bc743, type: 2}
-  disabledMat: {fileID: 2100000, guid: 4b47aeeab62256d4796229f9d49c766e, type: 2}
 --- !u!114 &4799839905300668093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,11 +43,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4799839905300668070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e76531a157ee04a9ad7fa01753ee59, type: 3}
+  m_Script: {fileID: 11500000, guid: 63e6a893c85eb6345bb4274b7c02e199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  character: {fileID: 4799839905637846759}
+  character: {fileID: 0}
+  self: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!114 &4799839905300668088
 MonoBehaviour:
   m_ObjectHideFlags: 0
