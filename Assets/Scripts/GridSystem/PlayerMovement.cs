@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 
         //Collider[] cols = Physics.OverlapBox(transform.position, transform.localScale, Quaternion.identity);
         //foreach (Collider c in cols) Debug.Log(c.name);
-        Vector3 moveTo =  grid.GetGridPoint(new Vector3(-PlayerInput.Vertical, 0, PlayerInput.Horizontal));
-        transform.position += moveTo;
+        Vector3 moveTo = new Vector3(-PlayerInput.Vertical, 0, PlayerInput.Horizontal);
+        transform.Translate(moveTo * Time.deltaTime * speed);
     }
 }
