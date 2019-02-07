@@ -73,7 +73,6 @@ public class FurniturePlacement : MonoBehaviour
 
     public void LoadFurnitureFromMenu(GameObject obj)
     {
-        Destroy(furniturePrefab);
         Debug.Log("Blueprints position : " + furnitureStructureTrans.position);
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
         furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
