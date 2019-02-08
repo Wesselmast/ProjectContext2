@@ -1,21 +1,32 @@
 ﻿using System;
+using System.Collections;
 using ContextInput;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] private WingDetection self, gun;
+    [SerializeField] private Animator fader;
 
     private Grid grid;
+    string scene;
 
     private void Awake() {
+        scene = SceneManager.GetActiveScene().name;
         grid = FindObjectOfType<Grid>();
         PlayerInput.Rotate += Rotate;
-        PlayerInput.Reset += Reset;
+        PlayerInput.Reset += () => StartCoroutine(Transition());
     }
 
-    private void Reset() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    IEnumerator Transition() {
+        fader.Play("FadeOut");
+        yield return new WaitForSeconds(0.9f);
+        SceneManager.LoadScene(scene);
+    }
+
+    private void OnDisable() {
+        PlayerInput.Rotate -= Rotate;
     }
 
     private void Rotate(Direction dir) {

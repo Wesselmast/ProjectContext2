@@ -9,6 +9,7 @@ public class Door : MonoBehaviour {
     [SerializeField] private Animator fader;
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject arrow;
     [SerializeField] private string nextLevel;
 
     private bool isComplete = false;
@@ -32,6 +33,7 @@ public class Door : MonoBehaviour {
         if (CompareLists(requiredFurnitures, currentFurnitures)) {
             isComplete = true;
             weapon.SetActive(false);
+            arrow.SetActive(true);
             placement.enabled = false;
         }
     }

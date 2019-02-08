@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6a7a9ac7e6834804392685eef2f86423
+  - enabled: 1
     path: Assets/Scenes/Isometric.unity
     guid: ba0e62b2c54483741974e9d502c5aa1a
   m_configObjects: {}

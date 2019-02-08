@@ -31,9 +31,8 @@ public class FurniturePlacement : MonoBehaviour
         {
             if (!furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered())
             {
-                Debug.Log("Blue");
                 furniturePrefab.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (Input.GetKeyDown(KeyCode.P) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
+                if (Input.GetKeyDown(KeyCode.Space) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
                 {
                     GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
                     obj.GetComponent<Furniture>().ChangeMaterial(originalMat);
@@ -47,7 +46,6 @@ public class FurniturePlacement : MonoBehaviour
             }
             else
             {
-                Debug.Log("Red");
                 furniturePrefab.GetComponent<Furniture>().ChangeMaterial(disabledMat);
             }
         }
