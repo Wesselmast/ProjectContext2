@@ -32,7 +32,6 @@ public class Door : MonoBehaviour {
             }
         }*/
         if (CompareLists(requiredFurnitures, currentFurnitures)) {
-            if (objectDetector.GetComponent<ObjectDetector>().detected)
             isComplete = true;
             weapon.SetActive(false);
             arrow.SetActive(true);

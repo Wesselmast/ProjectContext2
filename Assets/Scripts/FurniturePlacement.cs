@@ -35,9 +35,7 @@ public class FurniturePlacement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
                 {
                     GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
-                    obj.GetComponent<Furniture>().ChangeMaterial(originalMat);
-                    obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
-                    obj.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
+                    obj.GetComponent<Furniture>().Spawn(originalMat);
                     costBar.value += obj.GetComponent<Furniture>().cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
 

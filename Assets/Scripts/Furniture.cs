@@ -7,6 +7,25 @@ public class Furniture : MonoBehaviour
 
     [SerializeField] bool isMultipleObject;
 
+    [HideInInspector] public bool spawned;
+
+    private void Start()
+    {
+        //spawned = false;
+    }
+
+    public void Spawn(Material originalMat)
+    {
+        Debug.Log("Spawned");
+        spawned = true;
+
+        ChangeMaterial(originalMat);
+        transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
+        transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
+
+        
+    }
+
     public void ChangeMaterial(Material mat)
     {
         if (!isMultipleObject)
