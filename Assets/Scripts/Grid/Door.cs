@@ -10,6 +10,7 @@ public class Door : MonoBehaviour {
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrow;
+    [SerializeField] private Transform objectDetector;
     [SerializeField] private string nextLevel;
 
     private bool isComplete = false;
@@ -31,6 +32,7 @@ public class Door : MonoBehaviour {
             }
         }*/
         if (CompareLists(requiredFurnitures, currentFurnitures)) {
+            if (objectDetector.GetComponent<ObjectDetector>().detected)
             isComplete = true;
             weapon.SetActive(false);
             arrow.SetActive(true);
