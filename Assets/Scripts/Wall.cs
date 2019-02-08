@@ -5,33 +5,35 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     [SerializeField] private Material transparentMat;
-    private Material originaMat;
+    private Material originalMat;
 
     // Start is called before the first frame update
     void Start()
     {
-        originaMat = GetComponent<MeshRenderer>().material;
+        originalMat = GetComponent<MeshRenderer>().material;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeMaterialToOriginal()
     {
-        
+        GetComponent<MeshRenderer>().material = originalMat;
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
+        GetComponent<MeshRenderer>().material = originalMat;
+
         if (other.CompareTag("FurnitureBlueprint"))
         {
             GetComponent<MeshRenderer>().material = transparentMat;
-        }
+        }        
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("FurnitureBlueprint"))
         {
-            GetComponent<MeshRenderer>().material = originaMat;
+            GetComponent<MeshRenderer>().material = originalMat;
         }
     }
 

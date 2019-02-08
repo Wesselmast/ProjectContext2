@@ -70,6 +70,12 @@ public class FurniturePlacement : MonoBehaviour
     {
         Destroy(furniturePrefab);
 
+        Wall[] walls = FindObjectsOfType<Wall>();
+        for (int i = 0; i < walls.Length; i++)
+        {
+            walls[i].ChangeMaterialToOriginal();
+        }
+
         furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
         furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
         furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
