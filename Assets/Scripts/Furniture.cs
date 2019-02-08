@@ -22,8 +22,8 @@ public class Furniture : MonoBehaviour
         ChangeMaterial(originalMat);
         transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTrigger(false);
         transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Walls");
+        transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderTag("Furniture");
 
-        
     }
 
     public void ChangeMaterial(Material mat)

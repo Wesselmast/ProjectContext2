@@ -92,6 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 2
   customName: 
+  isMultipleObject: 0
+  spawned: 0
 --- !u!1 &4383662128843511734
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +109,7 @@ GameObject:
   - component: {fileID: 3231606417719917031}
   m_Layer: 8
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: FurnitureBlueprint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +213,7 @@ GameObject:
   - component: {fileID: 7670085235789273261}
   m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: FurnitureBlueprint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -49,4 +49,13 @@ public class FurnitureCollisionManager : MonoBehaviour
             
         }
     }
+
+    public void SetColliderTag(string tag)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.tag = tag;
+
+        }
+    }
 }
