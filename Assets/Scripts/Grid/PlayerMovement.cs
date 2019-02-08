@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
         scene = SceneManager.GetActiveScene().name;
         grid = FindObjectOfType<Grid>();
         PlayerInput.Rotate += Rotate;
-        PlayerInput.Reset += () => StartCoroutine(Transition());
+        PlayerInput.Reset += ResetLevel;
     }
 
     IEnumerator Transition() {
@@ -25,8 +25,13 @@ public class PlayerMovement : MonoBehaviour {
         SceneManager.LoadScene(scene);
     }
 
+    public void ResetLevel() {
+        StartCoroutine(Transition());
+    }
+
     private void OnDisable() {
         PlayerInput.Rotate -= Rotate;
+        PlayerInput.Reset -= ResetLevel;
     }
 
     private void Rotate(Direction dir) {
@@ -45,10 +50,10 @@ public class PlayerMovement : MonoBehaviour {
             if (gun.Right && self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
         }
         else {
-            if (self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
-            if (self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
-            if (self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
-            if (self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
+            if (self.Forward && PlayerInput.Horizontal < 0) transform.position += transform.forward;
+            if (self.Back && PlayerInput.Horizontal > 0) transform.position -= transform.forward;
+            if (self.Left && PlayerInput.Vertical < 0) transform.position -= transform.right;
+            if (self.Right && PlayerInput.Vertical > 0) transform.position += transform.right;
 
         }
     }
