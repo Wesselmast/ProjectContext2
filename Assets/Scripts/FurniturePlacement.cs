@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class FurniturePlacement : MonoBehaviour
 {
 
-    [SerializeField] private Slider costBar;
-
     private GameObject furniturePrefab;
     //[SerializeField] private Vector3 placementOffset;
 
@@ -32,11 +30,11 @@ public class FurniturePlacement : MonoBehaviour
             if (!furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered())
             {
                 furniturePrefab.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (Input.GetKeyDown(KeyCode.Space) && CostText.GetCurrentMaterial() >= furniturePrefab.GetComponent<Furniture>().cost)
+                if (Input.GetKeyDown(KeyCode.Space) && CostText.currentMaterial >= furniturePrefab.GetComponent<Furniture>().cost)
                 {
                     GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
                     obj.GetComponent<Furniture>().Spawn(originalMat);
-                    costBar.value += obj.GetComponent<Furniture>().cost;
+                    CostText.currentMaterial -= obj.GetComponent<Furniture>().cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
 
                     Destroy(furniturePrefab);
