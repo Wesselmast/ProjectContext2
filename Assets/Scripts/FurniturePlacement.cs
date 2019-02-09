@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class FurniturePlacement : MonoBehaviour
 {
 
-    private GameObject furniturePrefab;
-    //[SerializeField] private Vector3 placementOffset;
+    private GameObject furniture;
 
     private Material originalMat;
     [SerializeField] private Material blueprintMat;
@@ -14,70 +13,46 @@ public class FurniturePlacement : MonoBehaviour
 
     private Transform furnitureStructureTrans;
 
+    private Wall[] walls;
     private Grid grid;
     private Camera cam;
 
     private void Awake() {
+        walls = FindObjectsOfType<Wall>(); 
         grid = FindObjectOfType<Grid>();
         cam = Camera.main;
         furnitureStructureTrans = transform.GetChild(0).GetChild(0).GetChild(0);
     }
 
-    private void Update()
-    { 
-        if (furniturePrefab != null)
-        {
-            if (!furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered())
-            {
-                furniturePrefab.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (Input.GetKeyDown(KeyCode.Space) && CostText.currentMaterial >= furniturePrefab.GetComponent<Furniture>().cost)
-                {
-                    GameObject obj = Instantiate(furniturePrefab, furniturePrefab.transform.position, furniturePrefab.transform.rotation);
+    private void Update() {
+        if (furniture != null) {
+            if (!furniture.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().GetAnyColliderTriggered()) {
+                furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
+                if (Input.GetKeyDown(KeyCode.Space) && CostText.currentMaterial >= furniture.GetComponent<Furniture>().cost) {
+                    GameObject obj = Instantiate(furniture, furniture.transform.position, furniture.transform.rotation);
                     obj.GetComponent<Furniture>().Spawn(originalMat);
                     CostText.currentMaterial -= obj.GetComponent<Furniture>().cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
 
-                    Destroy(furniturePrefab);
+                    Destroy(furniture);
                 }
             }
-            else
-            {
-                furniturePrefab.GetComponent<Furniture>().ChangeMaterial(disabledMat);
-            }
+            else furniture.GetComponent<Furniture>().ChangeMaterial(disabledMat);
         }
-    }
-
-    private void Place()
-    {
-        //RaycastHit hitInfo;
-        //if (Physics.Raycast(cam.ScreenPointToRay(PlayerInput.MousePosition), out hitInfo)) {
-        //    if (hitInfo.transform == grid.transform) {
-        //        GameObject obj = Instantiate(furniturePrefab, grid.GetGridPoint(hitInfo.point) + placementOffset, Quaternion.identity);
-        //        obj.GetComponent<Collider>().isTrigger = false;
-        //        costBar.value += furniturePrefab.GetComponent<Furniture>().cost;
-        //    }
-        //    else if (hitInfo.collider.tag == "Furniture") {
-        //        costBar.value -= furniturePrefab.GetComponent<Furniture>().cost / 2;
-
-        //        Destroy(hitInfo.collider.gameObject);
-        //    }
-        //}
     }
 
     public void LoadFurnitureFromMenu(GameObject obj)
     {
-        Destroy(furniturePrefab);
+        Destroy(furniture);
 
-        Wall[] walls = FindObjectsOfType<Wall>();
         for (int i = 0; i < walls.Length; i++)
         {
             walls[i].ChangeMaterialToOriginal();
         }
 
-        furniturePrefab = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
-        furniturePrefab.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
-        furniturePrefab.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
-        //furniturePrefab.transform.position = obj.GetComponent<Furniture>().offset;
+        furniture = Instantiate(obj, furnitureStructureTrans.position, furnitureStructureTrans.rotation);
+        furniture.transform.SetParent(transform.GetChild(0).GetChild(0).GetChild(0));
+        furniture.transform.GetChild(1).GetComponent<FurnitureCollisionManager>().SetColliderLayer("Default");
     }
 
     public void LoadOriginalMaterialFromMenu(Material mat)

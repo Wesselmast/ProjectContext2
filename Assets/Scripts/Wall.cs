@@ -2,38 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wall : MonoBehaviour
-{
-    [SerializeField] private Material transparentMat;
-    private Material originalMat;
+public class Wall : MonoBehaviour {
+    private MeshRenderer r;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        originalMat = GetComponent<MeshRenderer>().material;
+    void Start() {
+        r = GetComponent<MeshRenderer>();
     }
 
-    public void ChangeMaterialToOriginal()
-    {
-        GetComponent<MeshRenderer>().material = originalMat;
+    public void ChangeMaterialToOriginal() {
+        r.enabled = true;
     }
 
 
-    private void OnTriggerStay(Collider other)
-    {
-        GetComponent<MeshRenderer>().material = originalMat;
-
-        if (other.CompareTag("FurnitureBlueprint"))
-        {
-            GetComponent<MeshRenderer>().material = transparentMat;
-        }        
+    private void OnTriggerStay(Collider other) {
+        if (other.CompareTag("FurnitureBlueprint")) {
+            r.enabled = false;
+        }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("FurnitureBlueprint"))
-        {
-            GetComponent<MeshRenderer>().material = originalMat;
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("FurnitureBlueprint")) {
+            r.enabled = true;
         }
     }
 
