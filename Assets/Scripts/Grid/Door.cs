@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class Door : MonoBehaviour {
-    [SerializeField] private Furniture[] requiredFurnitures;
     [SerializeField] private Animator fader;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrow;
 
+    private Furniture[] requiredFurnitures;
     private List<string> requiredFurnitureNames = new List<string>();
     private bool isComplete = false;
     private FurniturePlacement placement;
@@ -18,6 +18,7 @@ public class Door : MonoBehaviour {
     public static List<string> currentFurnitures = new List<string>();
 
     private void Awake() {
+        requiredFurnitures = FindObjectOfType<RequiredFurnitures>().GetRequiredFurnitures();
         weapon = player.transform.GetChild(0).GetChild(0).gameObject;
         placement = player.GetComponent<FurniturePlacement>();
         for (int i = 0; i < requiredFurnitures.Length; i++) {
