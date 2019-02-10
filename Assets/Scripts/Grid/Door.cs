@@ -12,6 +12,7 @@ public class Door : MonoBehaviour {
     private Furniture[] requiredFurnitures;
     private List<string> requiredFurnitureNames = new List<string>();
     private bool isComplete = false;
+    private bool done = false;
     private FurniturePlacement placement;
     private GameObject weapon;
 
@@ -28,7 +29,8 @@ public class Door : MonoBehaviour {
     }
 
     private void Update() {
-        if (CompareLists(requiredFurnitureNames, currentFurnitures)) {
+        if (CompareLists(requiredFurnitureNames, currentFurnitures) &&
+            FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
             isComplete = true;
             weapon.SetActive(false);
             arrow.SetActive(true);
@@ -43,7 +45,6 @@ public class Door : MonoBehaviour {
             return true;
 
         Dictionary<T, int> lookUp = new Dictionary<T, int>();
-        // create index for the first list
         for (int i = 0; i < aListA.Count; i++) {
             int count = 0;
             if (!lookUp.TryGetValue(aListA[i], out count)) {
@@ -55,7 +56,6 @@ public class Door : MonoBehaviour {
         for (int i = 0; i < aListB.Count; i++) {
             int count = 0;
             if (!lookUp.TryGetValue(aListB[i], out count)) {
-                // early exit as the current value in B doesn't exist in the lookUp (and not in ListA)
                 return false;
             }
             count--;
@@ -64,7 +64,6 @@ public class Door : MonoBehaviour {
             else
                 lookUp[aListB[i]] = count;
         }
-        // if there are remaining elements in the lookUp, that means ListA contains elements that do not exist in ListB
         return lookUp.Count == 0;
     }
 
@@ -77,6 +76,9 @@ public class Door : MonoBehaviour {
     private IEnumerator FadeOut() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else SceneManager.LoadScene(0);
     }
 }

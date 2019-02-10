@@ -1,7 +1,5 @@
 ﻿using ContextInput;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class FurniturePlacement : MonoBehaviour {
     [HideInInspector] public GameObject furniture;
@@ -20,7 +18,7 @@ public class FurniturePlacement : MonoBehaviour {
         if (furniture != null) {
             if (!furniture.GetComponentInChildren<FurnitureCollisionManager>().GetAnyColliderTriggered()) {
                 furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (Input.GetKeyDown(KeyCode.Space) && CostText.currentMaterial >= furniture.GetComponent<Furniture>().cost) {
+                if (PlayerInput.Place && CostText.currentMaterial >= furniture.GetComponent<Furniture>().cost) {
                     GameObject obj = Instantiate(furniture, furniture.transform.position, furniture.transform.rotation);
                     obj.GetComponent<Furniture>().Spawn(originalMat);
                     CostText.currentMaterial -= obj.GetComponent<Furniture>().cost;

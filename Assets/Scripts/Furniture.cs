@@ -12,6 +12,7 @@ public class Furniture : MonoBehaviour {
         ChangeMaterial(originalMat);
         var fcm = transform.GetChild(1).GetComponent<FurnitureCollisionManager>();
         fcm.SetColliderLayer("Walls");
+        fcm.SetCrosses("Not Placeable");
         fcm.SetColliderTag("Furniture");
         spawned = true;
     }

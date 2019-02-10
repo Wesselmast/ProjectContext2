@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4272403821060662581}
   - component: {fileID: 8114975805568045794}
   - component: {fileID: 1781420065032551124}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 861240984717572073}
   m_LocalRotation: {x: -0, y: 0.38268322, z: -0, w: 0.9238797}
   m_LocalPosition: {x: 0, y: -0.45, z: 0}
-  m_LocalScale: {x: -0.082586005, y: 0.07984971, z: 0.82586}
+  m_LocalScale: {x: 0.83185, y: 0.07984971, z: 0.07570081}
   m_Children: []
   m_Father: {fileID: 8470169656104347108}
   m_RootOrder: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8470169656104347108}
   - component: {fileID: 8770322224550853141}
   - component: {fileID: 2230936044068993792}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 2529463624664447851}
   - component: {fileID: 5893248077183445271}
   - component: {fileID: 638935673368760872}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 3461298017474179644}
   m_LocalRotation: {x: -0, y: -0.38268363, z: -0, w: 0.92387944}
   m_LocalPosition: {x: 0, y: -0.45, z: 0}
-  m_LocalScale: {x: -0.082586005, y: 0.079849705, z: 0.8258608}
+  m_LocalScale: {x: 0.83185, y: 0.079849705, z: 0.07570088}
   m_Children: []
   m_Father: {fileID: 8470169656104347108}
   m_RootOrder: 1

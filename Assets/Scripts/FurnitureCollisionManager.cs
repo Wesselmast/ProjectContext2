@@ -35,6 +35,14 @@ public class FurnitureCollisionManager : MonoBehaviour {
         }
     }
 
+    public void SetCrosses(string layerName) {
+        foreach (var c in colliders) {
+            if (c.gameObject.layer == LayerMask.NameToLayer("Placeable")) {
+                c.gameObject.layer = LayerMask.NameToLayer(layerName);
+            }
+        }
+    }
+
     public void SetColliderTag(string tag) {
         foreach (var c in colliders) {
             c.gameObject.tag = tag;

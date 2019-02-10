@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +10,7 @@ public class ButtonTransition : MonoBehaviour {
     private Button button;
 
     private void Awake() {
+        if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
         button.onClick.AddListener(() => StartCoroutine(Transition()));
     }
@@ -18,7 +18,6 @@ public class ButtonTransition : MonoBehaviour {
     IEnumerator Transition() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
-        try { SceneManager.LoadScene(nextLevel); }
-        catch { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+        SceneManager.LoadScene(nextLevel);
     }
 }
