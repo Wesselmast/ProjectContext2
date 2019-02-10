@@ -8,6 +8,7 @@ TagManager:
   - Grid
   - FurnitureBlueprint
   - Furniture
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

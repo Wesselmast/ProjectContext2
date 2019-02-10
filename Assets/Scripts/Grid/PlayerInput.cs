@@ -4,13 +4,12 @@ using UnityEngine;
 namespace ContextInput {
 
     public enum Direction {
-        Left, Right
+        Left, Right, Forward, Back, None
     }
 
     public class PlayerInput : MonoBehaviour {
-        public static float Horizontal { get; private set; }
-        public static float Vertical { get; private set; }
         public static event Action<Direction> Rotate = delegate { };
+        public static event Action<Direction> Move = delegate { };
         public static event Action Reset = delegate { };
         public static Vector3 MousePosition { get; private set; }
 
@@ -23,13 +22,13 @@ namespace ContextInput {
         private void Update() {
             if (Input.GetKeyDown(KeyCode.R)) Reset();
             if (Input.GetKeyDown(KeyCode.Q)) Rotate(Direction.Left);
-            if (Input.GetKeyDown(KeyCode.E)) Rotate(Direction.Right);
-            if (Input.GetKeyDown(KeyCode.A)) Horizontal = -1;
-            else if (Input.GetKeyDown(KeyCode.D)) Horizontal = 1;
-            else Horizontal = 0;
-            if (Input.GetKeyDown(KeyCode.W)) Vertical = 1;
-            else if (Input.GetKeyDown(KeyCode.S)) Vertical = -1;
-            else Vertical = 0;
+            else if (Input.GetKeyDown(KeyCode.E)) Rotate(Direction.Right);
+            else Rotate(Direction.None);
+            if (Input.GetKeyDown(KeyCode.A)) Move(Direction.Left);
+            else if (Input.GetKeyDown(KeyCode.D)) Move(Direction.Right);
+            else if (Input.GetKeyDown(KeyCode.W)) Move(Direction.Forward);
+            else if (Input.GetKeyDown(KeyCode.S)) Move(Direction.Back);
+            else Move(Direction.None);
             MousePosition = Input.mousePosition;
         }
     }

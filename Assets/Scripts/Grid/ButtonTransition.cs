@@ -18,6 +18,7 @@ public class ButtonTransition : MonoBehaviour {
     IEnumerator Transition() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
-        SceneManager.LoadScene(nextLevel);
+        try { SceneManager.LoadScene(nextLevel); }
+        catch { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
     }
 }

@@ -14,14 +14,15 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Awake() {
         transform.position = door.position;
-        transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y, door.eulerAngles.z);
+        transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         scene = SceneManager.GetActiveScene().name;
         grid = FindObjectOfType<Grid>();
         PlayerInput.Rotate += Rotate;
+        PlayerInput.Move += Move;
         PlayerInput.Reset += ResetLevel;
     }
 
-    IEnumerator Transition() {
+    private IEnumerator Transition() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene(scene);
@@ -33,40 +34,33 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnDisable() {
         PlayerInput.Rotate -= Rotate;
+        PlayerInput.Move -= Move;
         PlayerInput.Reset -= ResetLevel;
     }
 
     private void Rotate(Direction dir) {
         if (gun.gameObject.activeInHierarchy) {
-            if (dir == Direction.Left && (self.LocalLeft && gun.LocalLeft)) {
-                transform.eulerAngles -= Vector3.up * 90;
-            }
-            else if (dir == Direction.Right && (self.LocalRight && gun.LocalRight)) {
-                transform.eulerAngles += Vector3.up * 90;
-            }
+            if (gun.Left && self.Left && dir == Direction.Left) transform.eulerAngles -= Vector3.up * 90;
+            if (gun.Right && self.Right && dir == Direction.Right) transform.eulerAngles += Vector3.up * 90;
         }
         else {
-            if (dir == Direction.Left) {
-                transform.eulerAngles -= Vector3.up * 90;
-            }
-            else if (dir == Direction.Right) {
-                transform.eulerAngles += Vector3.up * 90;
-            }
+            if (dir == Direction.Left) transform.eulerAngles -= Vector3.up * 90;
+            if (dir == Direction.Right) transform.eulerAngles += Vector3.up * 90;
         }
     }
-    private void Update() {
+
+    private void Move(Direction dir) {
         if (gun.gameObject.activeInHierarchy) {
-            if (gun.Forward && self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
-            if (gun.Back && self.Back && PlayerInput.Horizontal > 0) transform.position += Vector3.back;
-            if (gun.Left && self.Left && PlayerInput.Vertical < 0) transform.position += Vector3.left;
-            if (gun.Right && self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
+            if (gun.Forward && self.Forward && dir == Direction.Forward) transform.position += transform.right;
+            if (gun.Back && self.Back && dir == Direction.Back) transform.position -= transform.right;
+            if (gun.Left && self.Left && dir == Direction.Left) transform.position += transform.forward;
+            if (gun.Right && self.Right && dir == Direction.Right) transform.position -= transform.forward;
         }
         else {
-            if (self.Forward && PlayerInput.Horizontal < 0) transform.position += Vector3.forward;
-            if (self.Back && PlayerInput.Horizontal > 0) transform.position -= Vector3.forward;
-            if (self.Left && PlayerInput.Vertical < 0) transform.position -= Vector3.right;
-            if (self.Right && PlayerInput.Vertical > 0) transform.position += Vector3.right;
-
+            if (self.Forward && dir == Direction.Forward) transform.position += transform.right;
+            if (self.Back && dir == Direction.Back) transform.position -= transform.right;
+            if (self.Left && dir == Direction.Left) transform.position += transform.forward;
+            if (self.Right && dir == Direction.Right) transform.position -= transform.forward;
         }
     }
 }

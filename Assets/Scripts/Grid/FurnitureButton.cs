@@ -9,12 +9,13 @@ public class FurnitureButton : MonoBehaviour {
 
     [SerializeField] private GameObject furniturePrefab;
     [SerializeField] private Material originalMaterial;
-    [SerializeField] private Transform spawnpoint;
     private Button button;
     private FurniturePlacement placement;
     private Wall[] walls;
+    private Transform spawnpoint;
 
     private void Awake() {
+        spawnpoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
         button = GetComponent<Button>();
         walls = FindObjectsOfType<Wall>();
         placement = FindObjectOfType<FurniturePlacement>();

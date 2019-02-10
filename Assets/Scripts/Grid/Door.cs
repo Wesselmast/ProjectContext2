@@ -5,32 +5,29 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class Door : MonoBehaviour {
-    [SerializeField] private List<string> requiredFurnitures;
+    [SerializeField] private Furniture[] requiredFurnitures;
     [SerializeField] private Animator fader;
-    [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrow;
-    [SerializeField] private string nextLevel;
 
+    private List<string> requiredFurnitureNames = new List<string>();
     private bool isComplete = false;
     private FurniturePlacement placement;
+    private GameObject weapon;
 
     public static List<string> currentFurnitures = new List<string>();
 
     private void Awake() {
+        weapon = player.transform.GetChild(0).GetChild(0).gameObject;
         placement = player.GetComponent<FurniturePlacement>();
+        for (int i = 0; i < requiredFurnitures.Length; i++) {
+            requiredFurnitureNames.Add(requiredFurnitures[i].customName);
+        }
         currentFurnitures.Clear();
     }
 
     private void Update() {
-        /*
-        for (int i = 0; i < currentFurnitures.Count; i++) {
-            if (requiredFurnitures.Contains(currentFurnitures[i].customName)) {
-                Debug.Log("ASIudgs");
-                currentFurnitures[i].isDone = true;
-            }
-        }*/
-        if (CompareLists(requiredFurnitures, currentFurnitures)) {
+        if (CompareLists(requiredFurnitureNames, currentFurnitures)) {
             isComplete = true;
             weapon.SetActive(false);
             arrow.SetActive(true);
@@ -76,9 +73,9 @@ public class Door : MonoBehaviour {
         }
     }
 
-    IEnumerator FadeOut() {
+    private IEnumerator FadeOut() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
-        SceneManager.LoadScene(nextLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
