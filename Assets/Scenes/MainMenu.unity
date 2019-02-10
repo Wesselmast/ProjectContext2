@@ -3236,7 +3236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 313611946}
-  nextLevel: Isometric
+  nextLevel: Tutorial
 --- !u!1001 &1282473018
 PrefabInstance:
   m_ObjectHideFlags: 0

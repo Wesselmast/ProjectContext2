@@ -5,7 +5,6 @@ using UnityEngine;
 public class Wall : MonoBehaviour {
     private MeshRenderer r;
 
-    // Start is called before the first frame update
     void Start() {
         r = GetComponent<MeshRenderer>();
     }

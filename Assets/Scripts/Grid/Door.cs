@@ -10,7 +10,6 @@ public class Door : MonoBehaviour {
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrow;
-    [SerializeField] private Transform objectDetector;
     [SerializeField] private string nextLevel;
 
     private bool isComplete = false;

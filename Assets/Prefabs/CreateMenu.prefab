@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 185961700}
   - component: {fileID: 185961704}
   - component: {fileID: 185961702}
-  - component: {fileID: 185961701}
+  - component: {fileID: 1773315195368141445}
   m_Layer: 5
   m_Name: Desk
   m_TagString: Untagged
@@ -161,34 +161,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512510275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6132250179769165917, guid: 2533d581c75a02e4aa587a555599ea85,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &185961701
+--- !u!114 &1773315195368141445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,9 +173,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 185961699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 6132250179769165917, guid: 2533d581c75a02e4aa587a555599ea85,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &209681604
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +487,7 @@ GameObject:
   - component: {fileID: 433207200}
   - component: {fileID: 433207204}
   - component: {fileID: 433207202}
-  - component: {fileID: 433207201}
+  - component: {fileID: 1467381808707685295}
   m_Layer: 5
   m_Name: Table
   m_TagString: Untagged
@@ -583,34 +563,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 246899372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6688209434046437251, guid: 66ef47b429aea11458de616febb94b8f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &433207201
+--- !u!114 &1467381808707685295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,9 +575,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 433207199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 6688209434046437251, guid: 66ef47b429aea11458de616febb94b8f,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &501768673
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43529415, g: 0.5019608, b: 0.7137255, a: 1}
+  m_Color: {r: 0.43529415, g: 0.5019608, b: 0.7137255, a: 0.5529412}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -878,6 +838,80 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &828080251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828080252}
+  - component: {fileID: 828080254}
+  - component: {fileID: 828080253}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &828080252
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828080251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1596869659}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 120, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &828080254
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828080251}
+  m_CullTransparentMesh: 0
+--- !u!114 &828080253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828080251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 71d45b90ea094dd4ea4df8e0ffdc0ca6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1 &1074529783
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +923,7 @@ GameObject:
   - component: {fileID: 1074529784}
   - component: {fileID: 1074529788}
   - component: {fileID: 1074529786}
-  - component: {fileID: 1074529785}
+  - component: {fileID: 7834502358317545156}
   m_Layer: 5
   m_Name: Shower
   m_TagString: Untagged
@@ -965,34 +999,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599182995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1074529785
+--- !u!114 &7834502358317545156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1001,9 +1011,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074529783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &1170421393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1029,7 @@ GameObject:
   - component: {fileID: 1170421394}
   - component: {fileID: 1170421398}
   - component: {fileID: 1170421396}
-  - component: {fileID: 1170421395}
+  - component: {fileID: 7972415508900538319}
   m_Layer: 5
   m_Name: Closet
   m_TagString: Untagged
@@ -1091,34 +1105,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 325268970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3300070720177423193, guid: d556b02920e15cc4bb59535928f6bf97,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1170421395
+--- !u!114 &7972415508900538319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1127,9 +1117,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 1170421393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
+--- !u!1 &1596869658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596869659}
+  - component: {fileID: 1596869662}
+  - component: {fileID: 1596869661}
+  - component: {fileID: 1596869660}
+  m_Layer: 5
+  m_Name: Bed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1596869659
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596869658}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 828080252}
+  m_Father: {fileID: 2003038963}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -565}
+  m_SizeDelta: {x: 120, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1596869662
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596869658}
+  m_CullTransparentMesh: 0
+--- !u!114 &1596869661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596869658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.60784316}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5254902}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 4c69bfa1e3c6a854992f04c01ecad447,
+      type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 828080253}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1596869660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596869658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 1547930982634593160, guid: 0ba75571fd5d6d4488b346407c5421af,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &1599182993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1315,7 @@ GameObject:
   - component: {fileID: 1681533334}
   - component: {fileID: 1681533338}
   - component: {fileID: 1681533336}
-  - component: {fileID: 1681533335}
+  - component: {fileID: 663623787839697387}
   m_Layer: 5
   m_Name: TV
   m_TagString: Untagged
@@ -1291,34 +1391,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 501768675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5838560172321605466, guid: eabb57960ebddb042a3e6edf9a50dd72,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1681533335
+--- !u!114 &663623787839697387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1327,9 +1403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681533333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 5838560172321605466, guid: eabb57960ebddb042a3e6edf9a50dd72,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &1870098883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1421,7 @@ GameObject:
   - component: {fileID: 1870098884}
   - component: {fileID: 1870098888}
   - component: {fileID: 1870098886}
-  - component: {fileID: 1870098885}
+  - component: {fileID: 6990988047838503376}
   m_Layer: 5
   m_Name: Couch
   m_TagString: Untagged
@@ -1417,34 +1497,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 139375973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 798909818351990617, guid: d73835c6eaacca54383d760306bfbd85,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1870098885
+--- !u!114 &6990988047838503376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1453,9 +1509,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1870098883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 798909818351990617, guid: d73835c6eaacca54383d760306bfbd85,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &1935905531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1527,7 @@ GameObject:
   - component: {fileID: 1935905532}
   - component: {fileID: 1935905536}
   - component: {fileID: 1935905534}
-  - component: {fileID: 1935905533}
+  - component: {fileID: 2015539385430307557}
   m_Layer: 5
   m_Name: Kitchen
   m_TagString: Untagged
@@ -1543,34 +1603,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397049233}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4508265503211034440, guid: 962b8d878fb277a45a23863aef6a5d93,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1935905533
+--- !u!114 &2015539385430307557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1579,9 +1615,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1935905531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 4508265503211034440, guid: 962b8d878fb277a45a23863aef6a5d93,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}
 --- !u!1 &2003038962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,7 +1632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2003038963}
   - component: {fileID: 2003038965}
-  - component: {fileID: 2003038964}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1619,13 +1658,14 @@ RectTransform:
   - {fileID: 1870098884}
   - {fileID: 1681533334}
   - {fileID: 1074529784}
+  - {fileID: 1596869659}
   m_Father: {fileID: 463613389}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -65}
-  m_SizeDelta: {x: 100, y: 1130}
+  m_AnchoredPosition: {x: -2, y: 0}
+  m_SizeDelta: {x: 120, y: 1250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2003038965
 CanvasRenderer:
@@ -1635,35 +1675,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003038962}
   m_CullTransparentMesh: 0
---- !u!114 &2003038964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003038962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1 &2098374072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1686,7 @@ GameObject:
   - component: {fileID: 2098374073}
   - component: {fileID: 2098374077}
   - component: {fileID: 2098374075}
-  - component: {fileID: 2098374074}
+  - component: {fileID: 616168192772877466}
   m_Layer: 5
   m_Name: Bath
   m_TagString: Untagged
@@ -1700,7 +1711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 59.99998}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2098374077
@@ -1751,34 +1762,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 209681606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadFurnitureFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1547930982634593160, guid: 0ba75571fd5d6d4488b346407c5421af,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadOriginalMaterialFromMenu
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &2098374074
+--- !u!114 &616168192772877466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1787,6 +1774,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2098374072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604dd83be4816b743860c78e39ce5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  furniturePrefab: {fileID: 1547930982634593160, guid: 0ba75571fd5d6d4488b346407c5421af,
+    type: 3}
+  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  spawnpoint: {fileID: 0}

@@ -1,39 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FurnitureCollider : MonoBehaviour
-{
-    private bool isTriggered;
+public class FurnitureCollider : MonoBehaviour {
+    private bool isTriggered = false;
 
-    // Start is called before the first frame update
-    void Start() {
-        isTriggered = false;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ground")) return;
-        
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.layer != LayerMask.NameToLayer("Walls")) return;
         isTriggered = true;
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ground")) return;
-
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.layer != LayerMask.NameToLayer("Walls")) return;
         isTriggered = false;
     }
 
-    public bool GetIsTriggered()
-    {
+    public bool GetIsTriggered() {
         return isTriggered;
     }
 }

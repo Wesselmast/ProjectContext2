@@ -2,60 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FurnitureCollisionManager : MonoBehaviour
-{
-    private bool anyColliderTriggered;
+public class FurnitureCollisionManager : MonoBehaviour {
+    private bool anyColliderTriggered = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        anyColliderTriggered = false;
+    private FurnitureCollider[] colliders;
 
+    private void Awake() {
+        colliders = GetComponentsInChildren<FurnitureCollider>();
     }
 
-    private void Update()
-    {
-        anyColliderTriggered = false;
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).GetComponent<FurnitureCollider>().GetIsTriggered())
-            {
+    private void Update() {
+        foreach (var c in colliders) {
+            if (c.GetIsTriggered() && c.gameObject.layer != LayerMask.NameToLayer("Placeable")) {
                 anyColliderTriggered = true;
                 return;
+            }
+            anyColliderTriggered = false;
+        }
+    }
+
+
+    public bool GetAnyColliderTriggered() {
+        return anyColliderTriggered;
+    }
+
+    public void SetColliderLayer(string layerName) {
+        foreach (var c in colliders) {
+            if (c.gameObject.layer != LayerMask.NameToLayer("Not Placeable") &&
+                c.gameObject.layer != LayerMask.NameToLayer("Placeable")) {
+                c.gameObject.layer = LayerMask.NameToLayer(layerName);
             }
         }
     }
 
-
-    public bool GetAnyColliderTriggered()
-    {
-        return anyColliderTriggered;
-    }
-
-    public void SetColliderTrigger(bool triggered)
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).GetComponent<Collider>().isTrigger = triggered;
-        }
-    }
-
-    public void SetColliderLayer(string layerName)
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.layer = LayerMask.NameToLayer(layerName);
-            
-        }
-    }
-
-    public void SetColliderTag(string tag)
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.tag = tag;
-
+    public void SetColliderTag(string tag) {
+        foreach (var c in colliders) {
+            c.gameObject.tag = tag;
         }
     }
 }
