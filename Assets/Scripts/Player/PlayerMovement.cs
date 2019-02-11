@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using ContextInput;
+﻿using ContextInput;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 

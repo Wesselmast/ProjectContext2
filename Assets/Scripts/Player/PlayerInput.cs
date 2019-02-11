@@ -14,12 +14,6 @@ namespace ContextInput {
         public static Vector3 MousePosition { get; private set; }
         public static bool Place { get; private set; }
 
-        private PlayerMovement player;
-
-        private void Awake() {
-            player = FindObjectOfType<PlayerMovement>();
-        }
-
         private void Update() {
             if (Input.GetKeyDown(KeyCode.R)) Reset();
             else if (Input.GetKeyDown(KeyCode.Q)) Rotate(Direction.Left);

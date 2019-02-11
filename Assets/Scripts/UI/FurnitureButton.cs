@@ -22,11 +22,11 @@ public class FurnitureButton : MonoBehaviour {
 
 
     private void Place() {
-        if (placement.furniture != null) Destroy(placement.furniture);
-        placement.furniture = Instantiate(furniturePrefab, spawnpoint.position, spawnpoint.rotation);
-        placement.furniture.transform.SetParent(spawnpoint);
-        placement.furniture.GetComponentInChildren<FurnitureCollisionManager>().SetColliderLayer("Default");
-        placement.originalMat = originalMaterial;
+        if (placement.Furniture != null) Destroy(placement.Furniture);
+        placement.Furniture = Instantiate(furniturePrefab, spawnpoint.position, spawnpoint.rotation);
+        placement.Furniture.transform.SetParent(spawnpoint);
+        placement.Furniture.GetComponentInChildren<FurnitureCollisionManager>().SetColliderLayer("Default");
+        placement.Original = originalMaterial;
         for (int i = 0; i < walls.Length; i++) {
             walls[i].ChangeMaterialToOriginal();
         }

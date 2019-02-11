@@ -2,8 +2,8 @@
 using UnityEngine;
 
 public class FurniturePlacement : MonoBehaviour {
-    [HideInInspector] public GameObject furniture;
-    [HideInInspector] public Material originalMat;
+    public GameObject Furniture { get; set; }
+    public Material Original { get; set; }
     [SerializeField] private Material blueprintMat;
     [SerializeField] private Material disabledMat;
 
@@ -15,18 +15,18 @@ public class FurniturePlacement : MonoBehaviour {
     }
 
     private void Update() {
-        if (furniture != null) {
-            if (!furniture.GetComponentInChildren<FurnitureCollisionManager>().GetAnyColliderTriggered()) {
-                furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (PlayerInput.Place && CostText.currentMaterial >= furniture.GetComponent<Furniture>().cost) {
-                    GameObject obj = Instantiate(furniture, furniture.transform.position, furniture.transform.rotation);
-                    obj.GetComponent<Furniture>().Spawn(originalMat);
+        if (Furniture != null) {
+            if (!Furniture.GetComponentInChildren<FurnitureCollisionManager>().GetAnyColliderTriggered()) {
+                Furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
+                if (PlayerInput.Place && CostText.currentMaterial >= Furniture.GetComponent<Furniture>().cost) {
+                    GameObject obj = Instantiate(Furniture, Furniture.transform.position, Furniture.transform.rotation);
+                    obj.GetComponent<Furniture>().Spawn(Original);
                     CostText.currentMaterial -= obj.GetComponent<Furniture>().cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
-                    Destroy(furniture);
+                    Destroy(Furniture);
                 }
             }
-            else furniture.GetComponent<Furniture>().ChangeMaterial(disabledMat);
+            else Furniture.GetComponent<Furniture>().ChangeMaterial(disabledMat);
         }
     }
 }
