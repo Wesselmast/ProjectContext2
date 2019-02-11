@@ -3,7 +3,7 @@
 public class MusicSwitcher : MonoBehaviour {
     [SerializeField] private AudioClip clip;
 
-    private void Awake() {
+    private void Start() {
         MusicPlayer.SwitchTracks(clip);
     }
 }
