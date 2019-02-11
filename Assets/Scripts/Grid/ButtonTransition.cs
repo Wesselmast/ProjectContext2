@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonTransition : MonoBehaviour {
-
+    [SerializeField] private KeyCode transitionButton = KeyCode.None;
     [SerializeField] private Animator fader;
     [SerializeField] private string nextLevel;
     private Button button;
@@ -13,6 +13,10 @@ public class ButtonTransition : MonoBehaviour {
         if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
         button.onClick.AddListener(() => StartCoroutine(Transition()));
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(transitionButton)) StartCoroutine(Transition());
     }
 
     IEnumerator Transition() {

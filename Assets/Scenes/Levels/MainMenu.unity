@@ -1515,6 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2bc2f002bf3ea439817101c0523c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionButton: 32
   fader: {fileID: 313611946}
   nextLevel: Level 0
 --- !u!1001 &1282473018
@@ -1887,10 +1888,10 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_HorizontalAxis: Empty
+  m_VerticalAxis: Empty
+  m_SubmitButton: Jump
+  m_CancelButton: Empty
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
