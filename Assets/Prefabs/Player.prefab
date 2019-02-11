@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 5324303392919021147}
   - component: {fileID: 5324303392919021146}
   - component: {fileID: 5324303392919021145}
+  - component: {fileID: 5382807164539529464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -393,9 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e76531a157ee04a9ad7fa01753ee59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 5324303390866159339}
   gun: {fileID: 5324303392902713346}
-  fader: {fileID: 0}
+  self: {fileID: 5324303390866159339}
   door: {fileID: 0}
 --- !u!114 &5324303392919021145
 MonoBehaviour:
@@ -413,6 +413,18 @@ MonoBehaviour:
   originalMat: {fileID: 0}
   blueprintMat: {fileID: 2100000, guid: 9adb8fec424a0b947bcd896e6e7bc743, type: 2}
   disabledMat: {fileID: 2100000, guid: 4b47aeeab62256d4796229f9d49c766e, type: 2}
+--- !u!114 &5382807164539529464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324303392919021144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9762ea025925d4ab20e4805e173931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5324303391022071099
 PrefabInstance:
   m_ObjectHideFlags: 0
