@@ -399,7 +399,7 @@ MonoBehaviour:
   gun: {fileID: 5324303392902713346}
   self: {fileID: 5324303390866159339}
   door: {fileID: 0}
-  moveLocal: 1
+  moveLocal: 0
 --- !u!114 &5324303392919021145
 MonoBehaviour:
   m_ObjectHideFlags: 0
