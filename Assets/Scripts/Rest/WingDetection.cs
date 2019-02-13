@@ -3,6 +3,7 @@
 public class WingDetection : MonoBehaviour {
 
     [SerializeField] private float rayDistance = 1f;
+    [SerializeField] private bool checkWorldPos = false;
 
     [Header("Checking")]
     [SerializeField] private bool checkLeft = true;
@@ -10,6 +11,10 @@ public class WingDetection : MonoBehaviour {
     [SerializeField] private bool checkForward = true;
     [SerializeField] private bool checkBack = true;
 
+    public bool LocalLeft { get; private set; }
+    public bool LocalRight { get; private set; }
+    public bool LocalForward { get; private set; }
+    public bool LocalBack { get; private set; }
     public bool Left { get; private set; }
     public bool Right { get; private set; }
     public bool Forward { get; private set; }
@@ -23,10 +28,16 @@ public class WingDetection : MonoBehaviour {
     }
 
     private void Update() {
-        if (checkLeft) Left = CheckRay(transform.forward);
-        if (checkRight) Right = CheckRay(-transform.forward);
-        if (checkForward) Forward = CheckRay(transform.right);
-        if (checkBack) Back = CheckRay(-transform.right);
+        if (checkLeft) LocalLeft = CheckRay(transform.forward);
+        if (checkRight) LocalRight = CheckRay(-transform.forward);
+        if (checkForward) LocalForward = CheckRay(transform.right);
+        if (checkBack) LocalBack = CheckRay(-transform.right);
+        if (checkWorldPos) {
+            if (checkLeft) Left = CheckRay(Vector3.left);
+            if (checkRight) Right = CheckRay(Vector3.right);
+            if (checkForward) Forward = CheckRay(Vector3.forward);
+            if (checkBack) Back = CheckRay(Vector3.back);
+        }
     }
 
     private bool CheckRay(Vector3 targetPosition) {
