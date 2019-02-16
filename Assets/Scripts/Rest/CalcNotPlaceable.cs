@@ -8,7 +8,7 @@ public class CalcNotPlaceable : MonoBehaviour {
 
     private void Update() {
         for (int i = 0; i < notPlaceable.Length; i++) {
-            if (notPlaceable[i].GetColliding()) {
+            if (notPlaceable[i].IsColliding) {
                 foreach (var n in notPlaceable) {
                     n.gameObject.SetActive(false);
                 }

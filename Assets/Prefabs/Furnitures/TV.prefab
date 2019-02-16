@@ -302,6 +302,7 @@ MonoBehaviour:
   cost: 2
   customName: TV
   isMultipleObject: 0
+  targetFace: 0
   spawned: 0
 --- !u!1 &8030555865301020328
 GameObject:

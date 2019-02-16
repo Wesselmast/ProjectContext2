@@ -5,12 +5,13 @@ public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] private WingDetection gun;
     [SerializeField] private WingDetection self;
-    [SerializeField] private Transform door;
     [SerializeField] private bool moveLocal;
 
     private Grid grid;
+    private Transform door;
 
     private void Awake() {
+        door = FindObjectOfType<Door>().transform;
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
         grid = FindObjectOfType<Grid>();

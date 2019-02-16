@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ContextInput;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,10 +14,15 @@ public class ButtonTransition : MonoBehaviour {
         if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
         button.onClick.AddListener(() => StartCoroutine(Transition()));
+        PlayerInput.Reset += MakeTransition;
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(transitionButton)) StartCoroutine(Transition());
+    private void OnDisable() {
+        PlayerInput.Reset -= MakeTransition;
+    }
+
+    private void MakeTransition() {
+        StartCoroutine(Transition());
     }
 
     IEnumerator Transition() {

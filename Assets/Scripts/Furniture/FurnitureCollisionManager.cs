@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FurnitureCollisionManager : MonoBehaviour {
     private bool anyColliderTriggered = true;
+    public bool AnyColliderTriggered { get { return anyColliderTriggered; } }
 
     private FurnitureCollider[] colliders;
 
@@ -19,11 +20,6 @@ public class FurnitureCollisionManager : MonoBehaviour {
             }
             anyColliderTriggered = false;
         }
-    }
-
-
-    public bool GetAnyColliderTriggered() {
-        return anyColliderTriggered;
     }
 
     public void SetColliderLayer(string layerName) {

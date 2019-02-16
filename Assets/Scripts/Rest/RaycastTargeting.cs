@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class RaycastTargeting : MonoBehaviour {
@@ -27,6 +25,6 @@ public class RaycastTargeting : MonoBehaviour {
     }
 
     public bool ObjectIsTouching() {
-        return children.Any(w => w.TargetName() == target.name);
+        return children.Any(w => target.name == w.TargetName);
     }
 }

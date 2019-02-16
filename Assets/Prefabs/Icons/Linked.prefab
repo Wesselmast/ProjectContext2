@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8335196412324579586}
   - component: {fileID: 8335196412324579597}
   m_Layer: 0
-  m_Name: AnimatedDone
+  m_Name: Linked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

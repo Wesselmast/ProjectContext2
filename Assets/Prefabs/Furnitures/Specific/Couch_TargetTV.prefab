@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3232f7add1cc95418a59f87173d3405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 1
+  rayDistance: 2
+  checkWorldPos: 0
   checkLeft: 1
   checkRight: 0
   checkForward: 0
@@ -337,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 1
+  checkWorldPos: 0
   checkLeft: 1
   checkRight: 0
   checkForward: 0
@@ -690,7 +692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3232f7add1cc95418a59f87173d3405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 1
+  rayDistance: 2
+  checkWorldPos: 0
   checkLeft: 1
   checkRight: 0
   checkForward: 0
@@ -741,9 +744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 4
+  Cost: 0
   customName: Couch
   isMultipleObject: 0
+  targetFace: 4
   spawned: 0
 --- !u!1 &8162284054099436785
 GameObject:

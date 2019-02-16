@@ -4,6 +4,7 @@ public class NotPlaceableColliding : MonoBehaviour {
     [SerializeField] private LayerMask walls;
 
     private bool isColliding = false;
+    public bool IsColliding { get { return isColliding; } }
     private Collider[] cols;
 
     private void Awake() {
@@ -21,9 +22,4 @@ public class NotPlaceableColliding : MonoBehaviour {
             }
         }
     }
-
-    public bool GetColliding() {
-        return isColliding;
-    }
-
 }

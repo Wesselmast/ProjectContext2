@@ -16,12 +16,12 @@ public class FurniturePlacement : MonoBehaviour {
 
     private void Update() {
         if (Furniture != null) {
-            if (!Furniture.GetComponentInChildren<FurnitureCollisionManager>().GetAnyColliderTriggered()) {
+            if (!Furniture.GetComponentInChildren<FurnitureCollisionManager>().AnyColliderTriggered) {
                 Furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
-                if (PlayerInput.Place && CostText.currentMaterial >= Furniture.GetComponent<Furniture>().cost) {
+                if (PlayerInput.Place && CostText.currentMaterial >= Furniture.GetComponent<Furniture>().Cost) {
                     GameObject obj = Instantiate(Furniture, Furniture.transform.position, Furniture.transform.rotation);
                     obj.GetComponent<Furniture>().Spawn(Original);
-                    CostText.currentMaterial -= obj.GetComponent<Furniture>().cost;
+                    CostText.currentMaterial -= obj.GetComponent<Furniture>().Cost;
                     Door.currentFurnitures.Add(obj.GetComponent<Furniture>().customName);
                     Destroy(Furniture);
                 }

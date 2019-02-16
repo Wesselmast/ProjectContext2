@@ -20,7 +20,7 @@ public class WingDetection : MonoBehaviour {
     public bool Forward { get; private set; }
     public bool Back { get; private set; }
 
-    private string targetName;
+    public string TargetName { get; private set; }
     private LayerMask walls;
 
     private void Awake() {
@@ -42,18 +42,18 @@ public class WingDetection : MonoBehaviour {
 
     private bool CheckRay(Vector3 targetPosition) {
         bool isTriggered = true;
-        targetName = string.Empty;
+        TargetName = string.Empty;
         if (Physics.Raycast(new Ray(transform.position, targetPosition), out RaycastHit hit, rayDistance, walls)) {
             isTriggered = false;
             try {
-                targetName = hit.collider.GetComponentInParent<Furniture>().customName;
+                Furniture fur = hit.collider.GetComponentInParent<Furniture>();
+                TargetName = fur.CheckFaces(hit.normal) ? fur.customName : string.Empty;
+
+                if (fur.CheckFaces(hit.normal)) TargetName = fur.customName;
+                else TargetName = string.Empty;
             }
             catch { }
         }
         return isTriggered;
-    }
-
-    public string TargetName() {
-        return targetName;
     }
 }

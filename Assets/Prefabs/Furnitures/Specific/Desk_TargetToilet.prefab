@@ -596,6 +596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 1
+  checkWorldPos: 0
+  checkIfVisible: 0
   checkLeft: 0
   checkRight: 1
   checkForward: 0
@@ -691,6 +693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 1
+  checkWorldPos: 0
+  checkIfVisible: 0
   checkLeft: 1
   checkRight: 0
   checkForward: 1
@@ -786,6 +790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 1
+  checkWorldPos: 0
+  checkIfVisible: 0
   checkLeft: 1
   checkRight: 1
   checkForward: 1

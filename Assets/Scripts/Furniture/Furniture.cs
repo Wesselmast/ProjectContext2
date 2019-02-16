@@ -1,10 +1,19 @@
 ﻿using UnityEngine;
 
 public class Furniture : MonoBehaviour {
-    public int cost;
+    private enum Face {
+        Front,
+        Back,
+        Left,
+        Right,
+        All
+    }
+
+    public int Cost;
     public string customName;
 
     [SerializeField] private bool isMultipleObject = false;
+    [SerializeField] private Face targetFace = Face.All;
 
     [HideInInspector] public bool spawned = false;
 
@@ -24,5 +33,14 @@ public class Furniture : MonoBehaviour {
                 transform.GetChild(0).GetChild(i).GetComponent<MeshRenderer>().material = mat;
             }
         }
+    }
+
+    public bool CheckFaces(Vector3 normal) {
+        if (targetFace == Face.Front && normal == -transform.right) return true;
+        if (targetFace == Face.Back && normal == transform.right) return true;
+        if (targetFace == Face.Left && normal == -transform.forward) return true;
+        if (targetFace == Face.Right && normal == transform.forward) return true;
+        if (targetFace == Face.All) return true;
+        return false;
     }
 }

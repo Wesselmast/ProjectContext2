@@ -39,10 +39,12 @@ public class Door : MonoBehaviour {
     }
 
     private bool CompareLists<T>(List<T> aListA, List<T> aListB) {
-        if (aListA == null || aListB == null)
+        if (aListA == null || aListB == null) {
             return false;
-        if (aListA.Count == 0)
+        }
+        if (aListA.Count == 0) {
             return true;
+        }
 
         Dictionary<T, int> lookUp = new Dictionary<T, int>();
         for (int i = 0; i < aListA.Count; i++) {
@@ -59,10 +61,12 @@ public class Door : MonoBehaviour {
                 return false;
             }
             count--;
-            if (count <= 0)
+            if (count <= 0) {
                 lookUp.Remove(aListB[i]);
-            else
+            }
+            else {
                 lookUp[aListB[i]] = count;
+            }
         }
         return lookUp.Count == 0;
     }
