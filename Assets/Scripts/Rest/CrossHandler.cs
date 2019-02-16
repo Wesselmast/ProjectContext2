@@ -19,7 +19,7 @@ public class CrossHandler : MonoBehaviour {
 
     private void Update() {
         foreach (var f in furCols) {
-            if (!furniture.spawned) {
+            if (!furniture.Spawned) {
                 if (otherCrossGroups.Length > 0) {
                     if (f.GetIsTriggered()) {
                         foreach (var oc in otherCrossGroups) {

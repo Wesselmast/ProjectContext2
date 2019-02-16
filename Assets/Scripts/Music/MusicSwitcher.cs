@@ -4,6 +4,7 @@ public class MusicSwitcher : MonoBehaviour {
     [SerializeField] private AudioClip clip;
 
     private void Start() {
-        MusicPlayer.SwitchTracks(clip);
+        try { MusicPlayer.SwitchTracks(clip); }
+        catch { }
     }
 }

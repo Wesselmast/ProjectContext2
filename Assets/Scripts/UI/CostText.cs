@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CostText : MonoBehaviour {
 
     [SerializeField] private float maxMaterial;
-    public static float currentMaterial;
+    public static float CurrentMaterial { get; set; }
     private Text text;
 
     private void Awake() {
         text = GetComponent<Text>();
-        currentMaterial = maxMaterial;
+        CurrentMaterial = maxMaterial;
     }
 
     private void Update() {
-        text.text = currentMaterial.ToString();
+        text.text = CurrentMaterial.ToString("F1");
     }
 }

@@ -299,11 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 2
-  customName: TV
-  isMultipleObject: 0
-  targetFace: 0
-  spawned: 0
+  settings: {fileID: 11400000, guid: f26a41bfd487122449cbf60f52b5b6c3, type: 2}
+  Spawned: 0
 --- !u!1 &8030555865301020328
 GameObject:
   m_ObjectHideFlags: 0

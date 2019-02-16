@@ -402,10 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 3
-  customName: Desk
-  isMultipleObject: 1
-  spawned: 0
+  settings: {fileID: 11400000, guid: 75ca1bc4c33d47d42960a1fa0dcf1c36, type: 2}
+  Spawned: 0
 --- !u!1 &8735613129808119473
 GameObject:
   m_ObjectHideFlags: 0

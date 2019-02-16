@@ -5,20 +5,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonTransition : MonoBehaviour {
-    [SerializeField] private KeyCode transitionButton = KeyCode.None;
-    [SerializeField] private Animator fader;
+    [SerializeField] private KeyCode nextLevelKey = KeyCode.None;
     [SerializeField] private string nextLevel;
+    private Animator fader;
     private Button button;
 
     private void Awake() {
+        fader = GameObject.Find("Fader").GetComponent<Animator>();
         if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
-        button.onClick.AddListener(() => StartCoroutine(Transition()));
-        PlayerInput.Reset += MakeTransition;
-    }
-
-    private void OnDisable() {
-        PlayerInput.Reset -= MakeTransition;
+        button.onClick.AddListener(MakeTransition);
+        if (Input.GetKeyDown(nextLevelKey)) MakeTransition();
     }
 
     private void MakeTransition() {

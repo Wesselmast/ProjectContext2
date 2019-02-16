@@ -24,11 +24,9 @@ public class FurnitureButton : MonoBehaviour {
     private void Place() {
         if (placement.Furniture != null) Destroy(placement.Furniture);
         placement.Furniture = Instantiate(furniturePrefab, spawnpoint.position, spawnpoint.rotation);
+        placement.Original = originalMaterial;
+        for (int i = 0; i < walls.Length; i++) walls[i].ChangeMaterialToOriginal();
         placement.Furniture.transform.SetParent(spawnpoint);
         placement.Furniture.GetComponentInChildren<FurnitureCollisionManager>().SetColliderLayer("Default");
-        placement.Original = originalMaterial;
-        for (int i = 0; i < walls.Length; i++) {
-            walls[i].ChangeMaterialToOriginal();
-        }
     }
 }

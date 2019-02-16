@@ -637,11 +637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
-  customName: Bath
-  isMultipleObject: 0
-  targetFace: 4
-  spawned: 0
+  settings: {fileID: 11400000, guid: 6795b6ba373f8b94cb39964a6c8b8b10, type: 2}
+  Spawned: 0
 --- !u!1001 &2940601025787917237
 PrefabInstance:
   m_ObjectHideFlags: 0

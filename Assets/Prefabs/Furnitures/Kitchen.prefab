@@ -405,10 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 2
-  customName: Kitchen
-  isMultipleObject: 0
-  spawned: 0
+  settings: {fileID: 11400000, guid: d2f6ed47b65342649b9da0aa8e96cdc7, type: 2}
+  Spawned: 0
 --- !u!1 &7509243857804237676
 GameObject:
   m_ObjectHideFlags: 0

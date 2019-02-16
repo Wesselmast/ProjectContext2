@@ -453,10 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79b703edb8cc488cd9247cc39cd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 3
-  customName: Table
-  isMultipleObject: 0
-  spawned: 0
+  settings: {fileID: 11400000, guid: be2ca37455ba9a344958a8294a420e34, type: 2}
+  Spawned: 0
 --- !u!1 &8089038762187759073
 GameObject:
   m_ObjectHideFlags: 0

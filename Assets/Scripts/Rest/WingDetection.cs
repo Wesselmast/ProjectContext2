@@ -47,10 +47,7 @@ public class WingDetection : MonoBehaviour {
             isTriggered = false;
             try {
                 Furniture fur = hit.collider.GetComponentInParent<Furniture>();
-                TargetName = fur.CheckFaces(hit.normal) ? fur.customName : string.Empty;
-
-                if (fur.CheckFaces(hit.normal)) TargetName = fur.customName;
-                else TargetName = string.Empty;
+                TargetName = fur.CheckFaces(hit.normal) ? fur.CustomName : string.Empty;
             }
             catch { }
         }

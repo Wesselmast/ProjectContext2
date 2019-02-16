@@ -5,31 +5,32 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 
 public class Door : MonoBehaviour {
-    [SerializeField] private GameObject player;
     [SerializeField] private GameObject arrow;
+    [SerializeField] private LevelSettings level;
 
-    public static List<string> currentFurnitures = new List<string>();
+    public static List<string> CurrentFurnitures = new List<string>();
     private List<string> requiredFurnitureNames = new List<string>();
 
+    private GameObject player;
     private Animator fader;
-    private Furniture[] requiredFurnitures;
     private FurniturePlacement placement;
     private GameObject weapon;
     private bool isComplete = false;
 
     private void Awake() {
+        player = FindObjectOfType<ContextInput.PlayerInput>().gameObject;
         fader = GameObject.Find("Fader").GetComponent<Animator>();
-        requiredFurnitures = FindObjectOfType<RequiredFurnitures>().GetRequiredFurnitures();
         weapon = player.transform.GetChild(0).GetChild(0).gameObject;
         placement = player.GetComponent<FurniturePlacement>();
-        for (int i = 0; i < requiredFurnitures.Length; i++) {
-            requiredFurnitureNames.Add(requiredFurnitures[i].customName);
-        }
-        currentFurnitures.Clear();
+    }
+
+    private void Start() {
+        requiredFurnitureNames = level.RequiredFurnitures;
+        CurrentFurnitures.Clear();
     }
 
     private void Update() {
-        if (CompareLists(requiredFurnitureNames, currentFurnitures) &&
+        if (CompareLists(requiredFurnitureNames, CurrentFurnitures) &&
             FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
             isComplete = true;
             weapon.SetActive(false);
