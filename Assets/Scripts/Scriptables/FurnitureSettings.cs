@@ -8,4 +8,8 @@ public class FurnitureSettings : ScriptableObject {
     public int Cost { get { return cost; } }
     [SerializeField] private Face seeableFace = Face.All;
     public Face TargetFace { get { return seeableFace; } }
+    [SerializeField] private GameObject spawnParticlePrefab;
+    public GameObject SpawnParticlePrefab { get { return spawnParticlePrefab; } }
+    [SerializeField] private GameObject destroyParticlePrefab;
+    public GameObject DestroyParticlePrefab { get { return destroyParticlePrefab; } }
 }

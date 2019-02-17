@@ -15,6 +15,9 @@ public class ButtonTransition : MonoBehaviour {
         if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
         button.onClick.AddListener(MakeTransition);
+    }
+
+    private void Update() {
         if (Input.GetKeyDown(nextLevelKey)) MakeTransition();
     }
 

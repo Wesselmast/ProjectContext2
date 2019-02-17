@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public enum Face {
     Front,
@@ -10,6 +11,7 @@ public enum Face {
 
 public class Furniture : MonoBehaviour {
     [SerializeField] private FurnitureSettings settings;
+    public FurnitureSettings Settings { get { return settings; } }
     [HideInInspector] public bool Spawned = false;
 
     public int Cost { get { return settings.Cost; } }
@@ -22,6 +24,16 @@ public class Furniture : MonoBehaviour {
         fcm.SetCrosses("Not Placeable");
         fcm.SetColliderTag("Furniture");
         Spawned = true;
+        SpawnParticle(settings.SpawnParticlePrefab);
+    }
+
+    public void SpawnParticle(GameObject particlePrefab) {
+        foreach (var c in GetComponentsInChildren<FurnitureCollider>()) {
+            if (c.gameObject.layer == LayerMask.NameToLayer("Walls")) {
+                GameObject particle = Instantiate(particlePrefab, c.transform.position, c.transform.rotation);
+                Destroy(particle, 1f);
+            }
+        }
     }
 
     public void ChangeMaterial(Material mat) {

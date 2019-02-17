@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customName: Couch
   cost: 4
-  targetFace: 4
-  isMultipleObject: 0
+  seeableFace: 4
+  spawnParticlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
+    type: 3}
+  destroyParticlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
+    type: 3}

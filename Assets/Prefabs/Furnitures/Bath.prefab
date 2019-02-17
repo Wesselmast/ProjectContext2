@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 6795b6ba373f8b94cb39964a6c8b8b10, type: 2}
+  particlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
+    type: 3}
   Spawned: 0
 --- !u!1 &4383662128843511734
 GameObject:

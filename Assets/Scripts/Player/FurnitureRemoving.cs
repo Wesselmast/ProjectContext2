@@ -16,6 +16,7 @@ public class FurnitureRemoving : MonoBehaviour {
         if (Physics.Raycast(new Ray(transform.position, transform.right), out RaycastHit hit, 1, LayerMask.GetMask("Walls"))) {
             try {
                 Furniture furniture = hit.collider.GetComponentInParent<Furniture>();
+                furniture.SpawnParticle(furniture.Settings.DestroyParticlePrefab);
                 CostText.CurrentMaterial += furniture.Cost * giveBackPercentage;
                 Door.CurrentFurnitures.Remove(furniture.CustomName);
                 Destroy(furniture.gameObject);
