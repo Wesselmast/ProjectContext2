@@ -11,7 +11,10 @@ public enum Face {
 
 public class Furniture : MonoBehaviour {
     [SerializeField] private FurnitureSettings settings;
-    public FurnitureSettings Settings { get { return settings; } }
+    public FurnitureSettings Settings {
+        get { return settings; }
+        set { settings = value; }
+    }
     [HideInInspector] public bool Spawned = false;
 
     public int Cost { get { return settings.Cost; } }
@@ -19,7 +22,7 @@ public class Furniture : MonoBehaviour {
 
     public void Spawn(Material originalMat) {
         ChangeMaterial(originalMat);
-        var fcm = transform.GetChild(1).GetComponent<FurnitureCollisionManager>();
+        var fcm = GetComponentInChildren<FurnitureCollisionManager>();
         fcm.SetColliderLayer("Walls");
         fcm.SetCrosses("Not Placeable");
         fcm.SetColliderTag("Furniture");

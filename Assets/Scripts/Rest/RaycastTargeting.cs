@@ -3,8 +3,34 @@ using UnityEngine;
 
 public class RaycastTargeting : MonoBehaviour {
     [SerializeField] private Furniture target;
+    [SerializeField] private GameObject animatedCross;
+    [SerializeField] private GameObject animatedDone;
 
-    [SerializeField] private GameObject animatedCross, animatedDone;
+    public Furniture Target {
+        get {
+            return target;
+        }
+        set {
+            target = value;
+        }
+    }
+
+    public GameObject NotDone {
+        get {
+            return animatedCross;
+        }
+        set {
+            animatedCross = value;
+        }
+    }
+    public GameObject Done {
+        get {
+            return animatedDone;
+        }
+        set {
+            animatedDone = value;
+        }
+    }
 
     private WingDetection[] children;
 

@@ -6,10 +6,10 @@ public class WingDetection : MonoBehaviour {
     [SerializeField] private bool checkWorldPos = false;
 
     [Header("Checking")]
-    [SerializeField] private bool checkLeft = true;
-    [SerializeField] private bool checkRight = true;
-    [SerializeField] private bool checkForward = true;
-    [SerializeField] private bool checkBack = true;
+    [SerializeField] private bool checkLeft = false;
+    [SerializeField] private bool checkRight = false;
+    [SerializeField] private bool checkForward = false;
+    [SerializeField] private bool checkBack = false;
 
     public bool LocalLeft { get; private set; }
     public bool LocalRight { get; private set; }

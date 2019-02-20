@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 
 public class CrossHandler : MonoBehaviour {
-
-    [SerializeField] private GameObject[] otherCrossGroups;
-
+    private CrossHandler[] otherCrossGroups;
     private FurnitureCollider[] furCols;
     private Furniture furniture;
 
@@ -15,6 +12,8 @@ public class CrossHandler : MonoBehaviour {
         foreach (var f in furCols) {
             f.gameObject.layer = LayerMask.NameToLayer("Placeable");
         }
+        otherCrossGroups = transform.parent.GetComponentsInChildren<CrossHandler>().
+                                   Where(c => c.gameObject != gameObject).ToArray();
     }
 
     private void Update() {

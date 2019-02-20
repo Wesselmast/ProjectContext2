@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3810d4911a51b6c45b197dc7152575fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherCrossGroups: []
 --- !u!1 &2210958841913355293
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: 75ca1bc4c33d47d42960a1fa0dcf1c36, type: 2}
-  particlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
-    type: 3}
   Spawned: 0
 --- !u!1 &8735613129808119473
 GameObject:
@@ -545,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4c5c095168908e24e9e30b2cab67e76c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.332
+      value: -0.337
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4c5c095168908e24e9e30b2cab67e76c, type: 3}
       propertyPath: m_LocalPosition.z
