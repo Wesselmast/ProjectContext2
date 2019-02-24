@@ -15,9 +15,11 @@ public class PlayerMovement : MonoBehaviour {
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
         grid = FindObjectOfType<Grid>();
+    }
+
+    private void OnEnable() {
         PlayerInput.Rotate += Rotate;
         PlayerInput.Move += Move;
-
     }
 
     private void OnDisable() {

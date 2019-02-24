@@ -30,8 +30,7 @@ public class Door : MonoBehaviour {
     }
 
     private void Update() {
-        if (CompareLists(requiredFurnitureNames, CurrentFurnitures) &&
-            FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
+        if (CompareLists(requiredFurnitureNames, CurrentFurnitures) && FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
             isComplete = true;
             weapon.SetActive(false);
             arrow.SetActive(true);
