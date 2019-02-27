@@ -7,35 +7,20 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private WingDetection self;
     [SerializeField] private bool moveLocal;
 
-    private Grid grid;
     private Transform door;
 
     private void Awake() {
         door = FindObjectOfType<Door>().transform;
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
-        grid = FindObjectOfType<Grid>();
     }
 
     private void OnEnable() {
-        PlayerInput.Rotate += Rotate;
         PlayerInput.Move += Move;
     }
 
     private void OnDisable() {
-        PlayerInput.Rotate -= Rotate;
         PlayerInput.Move -= Move;
-    }
-
-    private void Rotate(Direction dir) {
-        if (gun.gameObject.activeInHierarchy) {
-            if (gun.LocalLeft && self.LocalLeft && dir == Direction.Left) transform.eulerAngles -= Vector3.up * 90;
-            if (gun.LocalRight && self.LocalRight && dir == Direction.Right) transform.eulerAngles += Vector3.up * 90;
-        }
-        else {
-            if (dir == Direction.Left) transform.eulerAngles -= Vector3.up * 90;
-            if (dir == Direction.Right) transform.eulerAngles += Vector3.up * 90;
-        }
     }
 
     private void Move(Direction dir) {

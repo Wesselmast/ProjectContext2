@@ -19,7 +19,8 @@ public class Door : MonoBehaviour {
 
     private void Awake() {
         player = FindObjectOfType<ContextInput.PlayerInput>().gameObject;
-        fader = GameObject.Find("Fader").GetComponent<Animator>();
+        try { fader = GameObject.Find("Fader").GetComponent<Animator>(); }
+        catch { }
         weapon = player.transform.GetChild(0).GetChild(0).gameObject;
         placement = player.GetComponent<FurniturePlacement>();
     }
@@ -48,16 +49,14 @@ public class Door : MonoBehaviour {
 
         Dictionary<T, int> lookUp = new Dictionary<T, int>();
         for (int i = 0; i < aListA.Count; i++) {
-            int count = 0;
-            if (!lookUp.TryGetValue(aListA[i], out count)) {
+            if (!lookUp.TryGetValue(aListA[i], out int count)) {
                 lookUp.Add(aListA[i], 1);
                 continue;
             }
             lookUp[aListA[i]] = count + 1;
         }
         for (int i = 0; i < aListB.Count; i++) {
-            int count = 0;
-            if (!lookUp.TryGetValue(aListB[i], out count)) {
+            if (!lookUp.TryGetValue(aListB[i], out int count)) {
                 return false;
             }
             count--;

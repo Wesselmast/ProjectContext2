@@ -109,5 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed59f0b871a7334489ab689bd6b2aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damping: 15
-  offset: {x: 0, y: 6.85, z: -2.75}
+  target: {fileID: 0}
+  damping: 16.5
+  offset: {x: 0, y: 6.54, z: -7.67}
