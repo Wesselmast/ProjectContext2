@@ -1057,7 +1057,7 @@ PrefabInstance:
     - target: {fileID: 5651563152850322100, guid: 17d53faf95abc3f4da9fa605ab461afc,
         type: 3}
       propertyPath: m_Name
-      value: AnimatedCross
+      value: NotLinked
       objectReference: {fileID: 0}
     - target: {fileID: 5651563152850322103, guid: 17d53faf95abc3f4da9fa605ab461afc,
         type: 3}
@@ -1227,7 +1227,7 @@ PrefabInstance:
     - target: {fileID: 8335196412324579596, guid: dd9e478c859614e44bcdcab63d0580cc,
         type: 3}
       propertyPath: m_Name
-      value: AnimatedDone
+      value: Linked
       objectReference: {fileID: 0}
     - target: {fileID: 8335196412324579586, guid: dd9e478c859614e44bcdcab63d0580cc,
         type: 3}
