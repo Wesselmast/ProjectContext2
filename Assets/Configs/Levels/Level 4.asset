@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Level 4
   m_EditorClassIdentifier: 
   requiredFurnitures:
-  - {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97, type: 3}
-  - {fileID: 6132250179769165917, guid: 2533d581c75a02e4aa587a555599ea85, type: 3}
+  - {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f, type: 3}
+  - {fileID: 5969249679591912123, guid: a2a76541e4ed4954f85da4d64e375dff, type: 3}
+  - {fileID: 4318281298845445574, guid: 6d2e82ffe6aab034aa0969325d259e2d, type: 3}

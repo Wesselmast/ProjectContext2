@@ -51,6 +51,6 @@ public class RaycastTargeting : MonoBehaviour {
     }
 
     public bool ObjectIsTouching() {
-        return children.Any(w => target.name == w.TargetName);
+        return children.Any(w => target.CustomName == w.TargetName);
     }
 }
