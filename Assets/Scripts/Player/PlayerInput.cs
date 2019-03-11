@@ -10,12 +10,12 @@ namespace ContextInput {
     public class PlayerInput : MonoBehaviour {
         [SerializeField] private KeybindConfig keybinds;
 
+        public static Vector3 MousePosition { get { return Input.mousePosition; } }
         public static event Action<Direction> Rotate = delegate { };
         public static event Action<Direction> Move = delegate { };
         public static event Action Quit = delegate { };
         public static event Action Remove = delegate { };
         public static bool Place { get; private set; }
-        public static Vector3 MousePosition { get { return Input.mousePosition; } }
 
         private void Update() {
             if (Input.GetKeyDown(keybinds.RotateLeft)) Rotate(Direction.Left);
