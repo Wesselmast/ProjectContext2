@@ -3,7 +3,7 @@
 public class FurnitureCollider : MonoBehaviour {
     private bool isTriggered = false;
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         if (other.gameObject.tag == "Player") return;
         if (other.gameObject.layer != LayerMask.NameToLayer("Walls") &&
             other.gameObject.layer != LayerMask.NameToLayer("Not Placeable")) return;

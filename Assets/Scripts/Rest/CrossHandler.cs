@@ -18,31 +18,26 @@ public class CrossHandler : MonoBehaviour {
 
     private void Update() {
         foreach (var f in furCols) {
-            if (!furniture.Spawned) {
-                if (otherCrossGroups.Length > 0) {
-                    if (f.GetIsTriggered()) {
-                        foreach (var oc in otherCrossGroups) {
-                            foreach (var f1 in oc.GetComponentsInChildren<FurnitureCollider>()) {
-                                f1.gameObject.layer = LayerMask.NameToLayer("Not Placeable");
-                            }
-                        }
-                    }
-                    else {
-                        foreach (var oc in otherCrossGroups) {
-                            foreach (var f2 in oc.GetComponentsInChildren<FurnitureCollider>()) {
-                                f2.gameObject.layer = LayerMask.NameToLayer("Placeable");
-                            }
+            if (otherCrossGroups.Length > 0) {
+                if (f.GetIsTriggered()) {
+                    Debug.Log("piepschuim");
+                    foreach (var oc in otherCrossGroups) {
+                        foreach (var f1 in oc.GetComponentsInChildren<FurnitureCollider>()) {
+                            f1.gameObject.layer = LayerMask.NameToLayer("Not Placeable");
                         }
                     }
                 }
                 else {
-                    f.gameObject.layer = LayerMask.NameToLayer("Not Placeable");
+                    foreach (var oc in otherCrossGroups) {
+                        foreach (var f2 in oc.GetComponentsInChildren<FurnitureCollider>()) {
+                            f2.gameObject.layer = LayerMask.NameToLayer("Placeable");
+                        }
+                    }
                 }
             }
             else {
                 f.gameObject.layer = LayerMask.NameToLayer("Not Placeable");
             }
-
         }
     }
 }

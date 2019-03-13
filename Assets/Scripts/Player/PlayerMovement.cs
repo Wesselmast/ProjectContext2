@@ -4,12 +4,20 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] private bool moveLocal;
+    private Animator glowLeft;
+    private Animator glowRight;
+    private Animator glowTop;
+    private Animator glowBottom;
 
     private WingDetection gun;
     private WingDetection self;
     private Transform door;
 
     private void Awake() {
+        glowLeft = GameObject.Find("SideGlowLeft").GetComponent<Animator>();
+        glowRight = GameObject.Find("SideGlowRight").GetComponent<Animator>();
+        glowTop = GameObject.Find("TopGlow").GetComponent<Animator>();
+        glowBottom = GameObject.Find("BottomGlow").GetComponent<Animator>();
         door = FindObjectOfType<Door>().transform;
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
@@ -46,9 +54,16 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void CheckHowToMove(bool gun, bool self, Vector3 direction) {
+        Vector3 prevPosition = transform.position;
         if (this.gun.gameObject.activeInHierarchy) {
             if (gun && self) transform.position += direction;
         }
         else if (self) transform.position += direction;
+        if (prevPosition == transform.position) {
+            if (direction == transform.right) glowTop.Play("SideGlowNew");
+            else if (direction == -transform.right) glowBottom.Play("SideGlowNew");
+            else if (direction == -transform.forward) glowRight.Play("SideGlowNew");
+            else glowLeft.Play("SideGlowNew");
+        }
     }
 }

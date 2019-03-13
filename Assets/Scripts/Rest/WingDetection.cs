@@ -40,6 +40,8 @@ public class WingDetection : MonoBehaviour {
         }
     }
 
+    private int index;
+
     private bool CheckRay(Vector3 targetPosition) {
         bool isTriggered = true;
         TargetName = string.Empty;
