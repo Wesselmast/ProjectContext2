@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevelKey: 32
-  nextLevel: Level 0
+  nextLevel: Level 1.1
 --- !u!1001 &1282473018
 PrefabInstance:
   m_ObjectHideFlags: 0

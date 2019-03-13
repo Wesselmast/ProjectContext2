@@ -24,7 +24,7 @@ public class FurnitureRemoving : MonoBehaviour {
             try {
                 Furniture furniture = hit.collider.GetComponentInParent<Furniture>();
                 furniture.SpawnParticle(furniture.Settings.DestroyParticlePrefab);
-                CostText.CurrentMaterial += furniture.Cost * giveBackPercentage;
+                CostText.CurrentMaterial += furniture.Cost - 1;
                 Door.CurrentFurnitures.Remove(furniture.CustomName);
                 Destroy(placement.Furniture);
                 for (int i = 0; i < walls.Length; i++) walls[i].ChangeMaterialToOriginal();

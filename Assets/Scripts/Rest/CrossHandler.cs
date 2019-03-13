@@ -20,7 +20,6 @@ public class CrossHandler : MonoBehaviour {
         foreach (var f in furCols) {
             if (otherCrossGroups.Length > 0) {
                 if (f.GetIsTriggered()) {
-                    Debug.Log("piepschuim");
                     foreach (var oc in otherCrossGroups) {
                         foreach (var f1 in oc.GetComponentsInChildren<FurnitureCollider>()) {
                             f1.gameObject.layer = LayerMask.NameToLayer("Not Placeable");

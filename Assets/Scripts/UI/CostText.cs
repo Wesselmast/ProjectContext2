@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 public class CostText : MonoBehaviour {
 
-    [SerializeField] private float maxMaterial;
     public static float CurrentMaterial { get; set; }
+
+    [SerializeField] private float maxMaterial;
     private Text text;
 
     private void Awake() {
@@ -13,6 +14,6 @@ public class CostText : MonoBehaviour {
     }
 
     private void Update() {
-        text.text = CurrentMaterial.ToString("F1");
+        text.text = Mathf.FloorToInt(CurrentMaterial).ToString();
     }
 }
