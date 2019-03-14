@@ -124,7 +124,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6658,7 +6658,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -8919,9 +8919,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 847387028}
+  - component: {fileID: 847387029}
   - component: {fileID: 847387027}
+  - component: {fileID: 847387030}
   m_Layer: 0
-  m_Name: TrackSwitcher
+  m_Name: MusicInitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8936,10 +8938,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 847387026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab68fbd8d422324fad81b76cc0a42c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: c34872f5cbcbe2e4490e9fa7c5b29eb7, type: 3}
+  Event: event:/Music/4 min
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &847387028
 Transform:
   m_ObjectHideFlags: 0
@@ -8954,6 +8966,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847387029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847387026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7790be60018a4d84ba11ef3385d7db9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &847387030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847387026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music/7 min
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &858895432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10208,7 +10255,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11560,7 +11607,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13544,7 +13591,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13953,6 +14000,8 @@ GameObject:
   - component: {fileID: 1392816625}
   - component: {fileID: 1392816627}
   - component: {fileID: 1392816628}
+  - component: {fileID: 1392816626}
+  - component: {fileID: 1392816629}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -13975,6 +14024,29 @@ Transform:
   m_Father: {fileID: 678986791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!114 &1392816626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392816624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound Effects/Car
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 30
 --- !u!54 &1392816627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14004,6 +14076,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrol: {fileID: 277065235}
+--- !u!95 &1392816629
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392816624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b64fc164c7b3aa3498f1f3fc4241b8c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1398568548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19006,16 +19097,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5324303392919021146, guid: 1827954c8bdbbce43b56925586722f73,
-        type: 3}
-      propertyPath: fader
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5324303392919021146, guid: 1827954c8bdbbce43b56925586722f73,
-        type: 3}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
 --- !u!114 &1870111591 stripped
@@ -20215,11 +20296,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FollowCam
       objectReference: {fileID: 0}
-    - target: {fileID: 9071179479727018729, guid: 7ab0664193efae244ad9e1102ccc72a6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9071179479727018734, guid: 7ab0664193efae244ad9e1102ccc72a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20280,21 +20356,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1605860367}
-    - target: {fileID: 9071179479727018730, guid: 7ab0664193efae244ad9e1102ccc72a6,
-        type: 3}
-      propertyPath: offset.y
-      value: 8.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 9071179479727018730, guid: 7ab0664193efae244ad9e1102ccc72a6,
-        type: 3}
-      propertyPath: offset.z
-      value: -6.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 9071179479727018730, guid: 7ab0664193efae244ad9e1102ccc72a6,
-        type: 3}
-      propertyPath: damping
-      value: 13.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0664193efae244ad9e1102ccc72a6, type: 3}
 --- !u!1 &2043966948
@@ -21047,7 +21108,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

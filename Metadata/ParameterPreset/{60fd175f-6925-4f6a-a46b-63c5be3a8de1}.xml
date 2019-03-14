@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{60fd175f-6925-4f6a-a46b-63c5be3a8de1}">
+        <property name="name">
+            <value>Level Completed</value>
+        </property>
+        <relationship name="folder">
+            <destination>{f778d1a2-90b6-4b55-8f8e-109febc4168e}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{f805c88c-14ec-4dd6-83ce-ddee3573b44e}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{f805c88c-14ec-4dd6-83ce-ddee3573b44e}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

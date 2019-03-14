@@ -13,12 +13,15 @@ public class PlayerMovement : MonoBehaviour {
     private WingDetection self;
     private Transform door;
 
+    private FMODUnity.StudioEventEmitter ac;
+
     private void Awake() {
         glowLeft = GameObject.Find("SideGlowLeft").GetComponent<Animator>();
         glowRight = GameObject.Find("SideGlowRight").GetComponent<Animator>();
         glowTop = GameObject.Find("TopGlow").GetComponent<Animator>();
         glowBottom = GameObject.Find("BottomGlow").GetComponent<Animator>();
         door = FindObjectOfType<Door>().transform;
+        ac = GetComponent<FMODUnity.StudioEventEmitter>();
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
         WingDetection[] temp = FindObjectsOfType<WingDetection>();
@@ -60,6 +63,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (self) transform.position += direction;
         if (prevPosition == transform.position) {
+            ac.Play();
             if (direction == transform.right) glowTop.Play("SideGlowNew");
             else if (direction == -transform.right) glowBottom.Play("SideGlowNew");
             else if (direction == -transform.forward) glowRight.Play("SideGlowNew");
