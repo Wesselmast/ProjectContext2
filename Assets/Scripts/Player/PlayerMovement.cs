@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void CheckHowToMove(bool gun, bool self, Vector3 direction) {
         Vector3 prevPosition = transform.position;
-        if (this.gun.gameObject.activeInHierarchy) {
+        if (!Door.GunGone) {
             if (gun && self) transform.position += direction;
         }
         else if (self) transform.position += direction;

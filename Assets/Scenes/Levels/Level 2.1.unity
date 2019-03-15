@@ -1851,10 +1851,10 @@ RectTransform:
   - {fileID: 928805107}
   - {fileID: 767895335}
   - {fileID: 1785636074}
-  - {fileID: 1372146831}
   - {fileID: 665291403}
   - {fileID: 908990955}
   - {fileID: 289951230}
+  - {fileID: 1372146831}
   m_Father: {fileID: 1746500203}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2505,7 +2505,7 @@ RectTransform:
   m_Children:
   - {fileID: 1444778386}
   m_Father: {fileID: 214897935}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5519,6 +5519,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 644340254}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &659284353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659284354}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659284354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659284353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.64062, y: 179.75, z: -45.1875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665291402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5551,7 +5581,7 @@ RectTransform:
   m_Children:
   - {fileID: 1347651910}
   m_Father: {fileID: 214897935}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6972,9 +7002,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: This is Exegi, a student at the Southern Clara Highschool and a Spatium.
-    Exegi would like a Shower, a Bed and a Desk, where the shower is next to the desk
-    or deskchair.
+  m_text: "- Shower\r\n- Couch\r\n- Printer (Staat bij table)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca393c349fa7315419d4569a2cfff9a0, type: 2}
   m_sharedMaterial: {fileID: 21454194007261034, guid: ca393c349fa7315419d4569a2cfff9a0,
@@ -7003,7 +7031,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35
+  m_fontSize: 47.95
   m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7044,12 +7072,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -508.23004, w: -112.70109}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 168
+    characterCount: 46
     spriteCount: 0
-    spaceCount: 32
-    wordCount: 33
+    spaceCount: 8
+    wordCount: 9
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -7577,7 +7605,7 @@ RectTransform:
   m_Children:
   - {fileID: 1324366571}
   m_Father: {fileID: 214897935}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10819,7 +10847,7 @@ RectTransform:
   m_Children:
   - {fileID: 716308388}
   m_Father: {fileID: 214897935}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10838,7 +10866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furniturePrefab: {fileID: 5969249679591912123, guid: a2a76541e4ed4954f85da4d64e375dff,
+  furniturePrefab: {fileID: 798909818351990617, guid: d73835c6eaacca54383d760306bfbd85,
     type: 3}
   originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
 --- !u!114 &1372146833
@@ -14975,7 +15003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20373650851978f40b92e44857fb853c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMaterial: 80
+  maxMaterial: 10
 --- !u!114 &1754739815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15302,7 +15330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furniturePrefab: {fileID: 4318281298845445574, guid: 6d2e82ffe6aab034aa0969325d259e2d,
+  furniturePrefab: {fileID: 4318281298845445574, guid: beeebd38ff98c7148a46f736a9e6d7ae,
     type: 3}
   originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
 --- !u!114 &1785636076
@@ -17181,16 +17209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 203933111}
     m_Modifications:
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Name
-      value: Cross
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8470169656104347108, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17246,12 +17264,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 861240984717572073, guid: 82ba1706017f0cf44a68e6475148b3be,
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Cross
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 861240984717572073, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7e88cd3afe306c439b529c8a3fa66cf, type: 3}
-  m_Name: Level 2.1
+  m_Name: Level 2.3
   m_EditorClassIdentifier: 
   requiredFurnitures:
-  - {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f, type: 3}
-  - {fileID: 798909818351990617, guid: d73835c6eaacca54383d760306bfbd85, type: 3}
-  - {fileID: 4318281298845445574, guid: beeebd38ff98c7148a46f736a9e6d7ae, type: 3}
+  - {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97, type: 3}
+  - {fileID: 1841749559139881764, guid: b5a2b2ca94c03894d94f7fa93a28fb9b, type: 3}
+  - {fileID: 5917512465324997297, guid: bbc6c08d59215be4e9a800996cdb3e6b, type: 3}
+  - {fileID: 1775175355077285085, guid: 499e05eea3988f848826da3dfe45152d, type: 3}

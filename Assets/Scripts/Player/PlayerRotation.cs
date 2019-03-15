@@ -13,7 +13,8 @@ public class PlayerRotation : MonoBehaviour {
     private void Awake() {
         glowLeft = GameObject.Find("SideGlowLeft").GetComponent<Animator>();
         glowRight = GameObject.Find("SideGlowRight").GetComponent<Animator>();
-        ac = GetComponent<FMODUnity.StudioEventEmitter>();
+        try { ac = GetComponent<FMODUnity.StudioEventEmitter>(); }
+        catch { }
         WingDetection[] temp = FindObjectsOfType<WingDetection>();
         self = temp[0];
         gun = temp[1];
@@ -36,12 +37,13 @@ public class PlayerRotation : MonoBehaviour {
 
     private void CheckHowToRotate(bool gun, bool self, Vector3 rotation) {
         Vector3 prevEulers = transform.eulerAngles;
-        if (this.gun.gameObject.activeInHierarchy) {
+        if (!Door.GunGone) {
             if (gun && self) transform.eulerAngles += rotation;
         }
         else transform.eulerAngles += rotation;
         if (prevEulers == transform.eulerAngles) {
-            ac.Play();
+            try { ac.Play(); }
+            catch { }
             if (rotation == Vector3.up * 90) glowRight.Play("SideGlowNew");
             else glowLeft.Play("SideGlowNew");
         }

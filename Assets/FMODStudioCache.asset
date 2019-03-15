@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: 114359809212535086}
   StringsBanks:
   - {fileID: 114136163932848870}
-  stringsBankWriteTime: 636881712070459820
+  stringsBankWriteTime: 636881967429053195
   cacheVersion: 3
 --- !u!114 &114051794416066668
 MonoBehaviour:
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Build\Desktop\Master Bank.strings.bank
-  lastModified: 636881712070459820
+  lastModified: 636881967429053195
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -229,7 +229,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114871581221237586}
+  - {fileID: 114919840555537446}
   MinDistance: 0
   MaxDistance: 0
   Length: 104727
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Wessel\Desktop\Github School\ProjectContext2\Build\Desktop\Master
     Bank.bank
-  lastModified: 636881712070340153
+  lastModified: 636881967429002115
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -344,6 +344,22 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114475828229819338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main menu
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114516340811775950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +493,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114092138284949304}
+  - {fileID: 114475828229819338}
   MinDistance: 0
   MaxDistance: 0
   Length: 117818
@@ -646,6 +662,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &114919840555537446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Time passed
+  Min: 0
+  Max: 60
+  Default: 0
 --- !u!114 &114967313914073356
 MonoBehaviour:
   m_ObjectHideFlags: 0

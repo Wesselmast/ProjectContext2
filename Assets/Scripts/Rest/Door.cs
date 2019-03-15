@@ -7,6 +7,7 @@ using System.Linq;
 public class Door : MonoBehaviour {
     [SerializeField] private GameObject arrow;
     [SerializeField] private LevelSettings level;
+    public static bool GunGone = false;
 
     public static List<string> CurrentFurnitures = new List<string>();
     private List<string> requiredFurnitureNames = new List<string>();
@@ -18,6 +19,7 @@ public class Door : MonoBehaviour {
     private bool isComplete = false;
 
     private void Awake() {
+        GunGone = false;
         player = FindObjectOfType<ContextInput.PlayerInput>().gameObject;
         try { fader = GameObject.Find("Fader").GetComponent<Animator>(); }
         catch { }
@@ -33,6 +35,7 @@ public class Door : MonoBehaviour {
     private void Update() {
         if (CompareLists(requiredFurnitureNames, CurrentFurnitures) && FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
             isComplete = true;
+            GunGone = true;
             weapon.SetActive(false);
             arrow.SetActive(true);
             placement.enabled = false;
@@ -79,12 +82,9 @@ public class Door : MonoBehaviour {
     private IEnumerator FadeOut() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
-        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else {
-            MusicPlayer.ResetMusic();
-            SceneManager.LoadScene(0);
+        try { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
+        catch {
+            Debug.LogError("NO MORE SCENES IN BUILD!");
         }
     }
 }
