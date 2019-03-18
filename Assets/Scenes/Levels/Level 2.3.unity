@@ -386,7 +386,7 @@ RectTransform:
   m_Children:
   - {fileID: 4375032}
   m_Father: {fileID: 1776029728}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5370,7 +5370,7 @@ RectTransform:
   m_LocalScale: {x: 6.0686064, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1776029728}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5533,7 +5533,7 @@ RectTransform:
   m_LocalScale: {x: 0.97884005, y: 0.97884005, z: 0.97884005}
   m_Children: []
   m_Father: {fileID: 1776029728}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5883,7 +5883,7 @@ RectTransform:
   m_LocalScale: {x: 11.80979, y: 1.0000045, z: 1.0000045}
   m_Children: []
   m_Father: {fileID: 1776029728}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7634,7 +7634,7 @@ RectTransform:
   - {fileID: 1180897059}
   - {fileID: 67084094}
   m_Father: {fileID: 1776029728}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10249,7 +10249,7 @@ PrefabInstance:
     - target: {fileID: 220777436208779779, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 220777436208779779, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
         type: 3}
@@ -14756,12 +14756,12 @@ RectTransform:
   - {fileID: 934451597}
   - {fileID: 262011229}
   - {fileID: 391879355}
+  - {fileID: 567581847}
   - {fileID: 547109708}
   - {fileID: 660482751}
   - {fileID: 950662753}
   - {fileID: 45455466}
   - {fileID: 1299156487}
-  - {fileID: 567581847}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -14,15 +14,11 @@ public class ButtonTransition : MonoBehaviour {
         fader = GameObject.Find("Fader").GetComponent<Animator>();
         if (nextLevel == string.Empty) nextLevel = SceneManager.GetActiveScene().name;
         button = GetComponent<Button>();
-        button.onClick.AddListener(MakeTransition);
+        button.onClick.AddListener(() => StartCoroutine(Transition()));
     }
 
     private void Update() {
-        if (Input.GetKeyDown(nextLevelKey)) MakeTransition();
-    }
-
-    private void MakeTransition() {
-        StartCoroutine(Transition());
+        if (Input.GetKeyDown(nextLevelKey)) StartCoroutine(Transition());
     }
 
     IEnumerator Transition() {
