@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (self) transform.position += direction;
         if (prevPosition == transform.position) {
-            ac.Play();
+            //ac.Play();
             if (direction == transform.right) glowTop.Play("SideGlowNew");
             else if (direction == -transform.right) glowBottom.Play("SideGlowNew");
             else if (direction == -transform.forward) glowRight.Play("SideGlowNew");

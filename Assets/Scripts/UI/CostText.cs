@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CostText : MonoBehaviour {
@@ -6,10 +7,10 @@ public class CostText : MonoBehaviour {
     public static float CurrentMaterial { get; set; }
 
     [SerializeField] private float maxMaterial;
-    private Text text;
+    private TextMeshPro text;
 
     private void Awake() {
-        text = GetComponent<Text>();
+        text = GetComponent<TextMeshPro>();
         CurrentMaterial = maxMaterial;
     }
 
