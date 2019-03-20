@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Button))]
 public class FurnitureButton : MonoBehaviour {
@@ -29,4 +30,14 @@ public class FurnitureButton : MonoBehaviour {
         placement.Furniture.transform.SetParent(spawnpoint);
         placement.Furniture.GetComponentInChildren<FurnitureCollisionManager>().SetColliderLayer("Default");
     }
+
+    /*
+    void Start()
+    {
+        GetComponent<Animator>().enabled = true;
+        // Niet weghalen!
+    }
+    */
+
+    
 }

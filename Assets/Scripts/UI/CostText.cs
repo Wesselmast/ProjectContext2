@@ -7,10 +7,10 @@ public class CostText : MonoBehaviour {
     public static float CurrentMaterial { get; set; }
 
     [SerializeField] private float maxMaterial;
-    private TextMeshPro text;
+    private TextMeshProUGUI text;
 
     private void Awake() {
-        text = GetComponent<TextMeshPro>();
+        text = GetComponent<TextMeshProUGUI>();
         CurrentMaterial = maxMaterial;
     }
 
