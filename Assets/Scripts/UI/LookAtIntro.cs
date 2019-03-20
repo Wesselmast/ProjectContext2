@@ -9,7 +9,7 @@ public class LookAtIntro : MonoBehaviour {
         GetComponent<UnityEngine.UI.Button>().onClick.AddListener(Clicked);
     }
 
-    private void Clicked() {
+    public void Clicked() {
         intro.gameObject.SetActive(true);
         intro.Play("IntroFadeOut");
     }
