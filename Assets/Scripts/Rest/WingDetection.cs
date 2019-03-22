@@ -27,7 +27,7 @@ public class WingDetection : MonoBehaviour {
         walls = LayerMask.GetMask("Walls");
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (checkLeft) LocalLeft = CheckRay(transform.forward);
         if (checkRight) LocalRight = CheckRay(-transform.forward);
         if (checkForward) LocalForward = CheckRay(transform.right);

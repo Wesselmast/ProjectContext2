@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74e9997aa5de9f4cbe71e2f1110f00b, type: 3}
+  m_Name: SmallTable
+  m_EditorClassIdentifier: 
+  customName: SmallTable
+  cost: 1
+  seeableFace: 4
+  spawnParticlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
+    type: 3}
+  destroyParticlePrefab: {fileID: 4295450276198408346, guid: f06c335a8131d964a998330e04745d38,
+    type: 3}
