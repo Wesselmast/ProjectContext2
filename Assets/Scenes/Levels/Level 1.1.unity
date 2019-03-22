@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furniturePrefab: {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97,
+  furniturePrefab: {fileID: 6688209434046437251, guid: 66ef47b429aea11458de616febb94b8f,
     type: 3}
-  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  originalMaterial: {fileID: 2100000, guid: b4cb046fa18a4f643bca4db53fddf1c8, type: 2}
 --- !u!114 &3021878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,9 +3784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03525f8df848b408355adbf3f53ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furniturePrefab: {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97,
+  furniturePrefab: {fileID: 4508265503211034440, guid: 962b8d878fb277a45a23863aef6a5d93,
     type: 3}
-  originalMaterial: {fileID: 2100000, guid: de927759e7727d74999a26dedad275fc, type: 2}
+  originalMaterial: {fileID: 2100000, guid: b4cb046fa18a4f643bca4db53fddf1c8, type: 2}
 --- !u!114 &306676619
 MonoBehaviour:
   m_ObjectHideFlags: 0
