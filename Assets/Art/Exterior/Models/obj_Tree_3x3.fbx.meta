@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: e5cb142e81e423c43a8189a88139153a
+guid: 37327936136a02944acc003c1377ae01
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #36'
+    2100000: lambert4
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_wall_clean
+    4300000: pCylinder17
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #36'
-    second: {fileID: 2100000, guid: 76998def43197ee48b68a0e1c6c5bcd2, type: 2}
+      name: lambert4
+    second: {fileID: 2100000, guid: 81cdd4e90a171b2448f836c48c3c8bb0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

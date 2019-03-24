@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: e5cb142e81e423c43a8189a88139153a
+guid: d2b17d49314179d46810752a94e10d9d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #36'
+    2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: obj_wall_clean
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #36'
-    second: {fileID: 2100000, guid: 76998def43197ee48b68a0e1c6c5bcd2, type: 2}
+    4300000: Bord2
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

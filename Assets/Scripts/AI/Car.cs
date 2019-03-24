@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour {
     [SerializeField] private WaypointCollection patrol;
+    [SerializeField] private float speed = 5f;
 
     private Transform[] waypoints;
     private int index = 0;
@@ -18,7 +19,7 @@ public class Car : MonoBehaviour {
         if (index >= waypoints.Length - 1) index = -1;
         index++;
         while (Vector3.Distance(transform.position, waypoints[index].position) > .2f){
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, Time.deltaTime * 5);
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, Time.deltaTime * speed);
             transform.LookAt(waypoints[index]);
             yield return null;
         }
