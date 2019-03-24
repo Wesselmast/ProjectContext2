@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredFurnitures:
   - {fileID: 3319555044482963285, guid: be9e303e4115eb04ebd670f43d30f9d8, type: 3}
-  - {fileID: 7582777162152364396, guid: d556b02920e15cc4bb59535928f6bf97, type: 3}
+  - {fileID: 2814330292595991331, guid: 3228310984c1da74eaf2fc6f751b8019, type: 3}
   - {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f, type: 3}
   - {fileID: 1841749559139881764, guid: b5a2b2ca94c03894d94f7fa93a28fb9b, type: 3}

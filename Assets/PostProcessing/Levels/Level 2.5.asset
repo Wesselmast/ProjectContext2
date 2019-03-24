@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: Level 1.1
+  m_Name: Level 2.5
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -43,8 +43,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 2
-      radius: 0.5
+      intensity: 2.5
+      radius: 0.4
       sampleCount: 16
       downsampling: 0
       forceForwardCompatibility: 0
@@ -101,14 +101,14 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.09
-        threshold: 0.6
+        intensity: 0.175
+        threshold: 0.7
         softKnee: 0.5
         radius: 7
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
-        intensity: 3
+        intensity: 1
   colorGrading:
     m_Enabled: 1
     m_Settings:
@@ -122,20 +122,20 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 1
-        temperature: 10
-        tint: 25
+        temperature: 0
+        tint: 0
         hueShift: 0
-        saturation: 1.2
-        contrast: 1.1
+        saturation: 1
+        contrast: 0.85
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
-        green: {x: 0, y: 1.05, z: 0}
-        blue: {x: 0, y: 0, z: 1}
-        currentEditingChannel: 1
+        red: {x: 0.9, y: 0, z: 0}
+        green: {x: 0, y: 0.9, z: 0}
+        blue: {x: 0, y: 0, z: 1.05}
+        currentEditingChannel: 2
       colorWheels:
         mode: 1
         log:
-          slope: {r: 0.8819126, g: 0.8730714, b: 1, a: 0}
+          slope: {r: 1, g: 0.9891253, b: 0.9891253, a: 0}
           power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
@@ -150,7 +150,7 @@ MonoBehaviour:
             - serializedVersion: 3
               time: 0
               value: 0
-              inSlope: 1
+              inSlope: 0
               outSlope: 1
               tangentMode: 0
               weightedMode: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
               time: 1
               value: 1
               inSlope: 1
-              outSlope: 1
+              outSlope: 0
               tangentMode: 0
               weightedMode: 0
               inWeight: 0

@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.5149074, g: 0.75209314, b: 0.8207547, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.025
+  m_FogDensity: 0.055
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -5353,7 +5353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326561818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.96, y: -1.7, z: -5.0699997}
+  m_LocalPosition: {x: -27.96, y: -1.7, z: -5.0699997}
   m_LocalScale: {x: 9, y: 0.5, z: 9}
   m_Children:
   - {fileID: 603906841}
@@ -5438,7 +5438,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.8349056, g: 1, b: 0.9635678, a: 1}
-  m_Intensity: 0.85
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -19746,7 +19746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230496796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.96, y: -1.7, z: -10.07}
+  m_LocalPosition: {x: -18.96, y: -1.7, z: -10.07}
   m_LocalScale: {x: 9, y: 0.5, z: 9}
   m_Children:
   - {fileID: 681382495}
@@ -28061,7 +28061,7 @@ PrefabInstance:
         type: 3}
       propertyPath: profile
       value: 
-      objectReference: {fileID: 11400000, guid: 47fd0b50c19435d49812712abcf680fb,
+      objectReference: {fileID: 11400000, guid: b13deccfe8864614a9a3e235a1bbd058,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0664193efae244ad9e1102ccc72a6, type: 3}
