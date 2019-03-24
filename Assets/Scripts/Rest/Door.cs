@@ -32,7 +32,7 @@ public class Door : MonoBehaviour {
         CurrentFurnitures.Clear();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (CompareLists(requiredFurnitureNames, CurrentFurnitures) && FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
             isComplete = true;
             GunGone = true;

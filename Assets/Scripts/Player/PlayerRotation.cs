@@ -42,8 +42,8 @@ public class PlayerRotation : MonoBehaviour {
         }
         else transform.eulerAngles += rotation;
         if (prevEulers == transform.eulerAngles) {
-            //try { ac.Play(); }
-            //catch { }
+            try { ac.Play(); }
+            catch { }
             if (rotation == Vector3.up * 90) glowRight.Play("SideGlowNew");
             else glowLeft.Play("SideGlowNew");
         }

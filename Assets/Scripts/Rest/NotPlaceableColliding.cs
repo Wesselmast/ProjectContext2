@@ -11,7 +11,7 @@ public class NotPlaceableColliding : MonoBehaviour {
         cols = GetComponentsInChildren<Collider>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         foreach (Collider c in cols) {
             if (Physics.CheckBox(c.bounds.center, c.bounds.extents, c.transform.rotation, walls)) {
                 isColliding = true;

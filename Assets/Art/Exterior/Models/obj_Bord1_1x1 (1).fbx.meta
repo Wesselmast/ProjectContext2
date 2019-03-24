@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: bc0dacb5a51a69b4f89f013067f7e62a
+guid: 0bcee539b681b944cb136a8ae308f7bc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: phong3
     2300000: //RootNode
     3300000: //RootNode
     4300000: Bord2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong3
+    second: {fileID: 2100000, guid: ce489404d5dc65744aaa30205eacab67, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

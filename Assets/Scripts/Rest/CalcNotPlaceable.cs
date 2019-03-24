@@ -6,7 +6,7 @@ public class CalcNotPlaceable : MonoBehaviour {
 
     [SerializeField] private NotPlaceableColliding[] notPlaceable;
 
-    private void Update() {
+    private void FixedUpdate() {
         for (int i = 0; i < notPlaceable.Length; i++) {
             if (notPlaceable[i].IsColliding) {
                 foreach (var n in notPlaceable) {
