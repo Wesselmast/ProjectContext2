@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1254933421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b2bc2f002bf3ea439817101c0523c4a, type: 3}
+  m_Script: {fileID: 11500000, guid: b2c5e47125fccda498dbe0de0af2a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevelKey: 32
@@ -2087,11 +2087,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1174505481}
     m_Modifications:
-    - target: {fileID: 220777436208779783, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
-        type: 3}
-      propertyPath: m_Name
-      value: Fader
-      objectReference: {fileID: 0}
     - target: {fileID: 220777436208779779, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2196,6 +2191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 220777436208779783, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
+        type: 3}
+      propertyPath: m_Name
+      value: Fader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 447fd3d2d30eb3d468b2a6343ec5af92, type: 3}

@@ -16,6 +16,7 @@ namespace ContextInput {
         public static event Action Quit = delegate { };
         public static event Action Remove = delegate { };
         public static event Action DebugSkipLevel = delegate { };
+        public static event Action DebugLastLevel = delegate { };
         public static bool Place { get; private set; }
 
         private void Update() {
@@ -28,6 +29,7 @@ namespace ContextInput {
             else if (Input.GetKeyDown(keybinds.QuitGame)) Quit();
             else if (Input.GetKeyDown(keybinds.RemoveObject)) Remove();
             else if (Input.GetKeyDown(keybinds.DebugSkipLevel)) DebugSkipLevel();
+            else if (Input.GetKeyDown(keybinds.DebugLastLevel)) DebugLastLevel();
             else Place = Input.GetKeyDown(keybinds.PlaceObject);
         }
     }

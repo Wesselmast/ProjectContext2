@@ -28729,6 +28729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Completed
       objectReference: {fileID: 0}
+    - target: {fileID: 2687573888196579833, guid: fb9c664dc2dba15489d6f488f68d619b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2687573888196579832, guid: fb9c664dc2dba15489d6f488f68d619b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36424,7 +36429,7 @@ PrefabInstance:
     - target: {fileID: 9071179479727018733, guid: 7ab0664193efae244ad9e1102ccc72a6,
         type: 3}
       propertyPath: near clip plane
-      value: 4
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0664193efae244ad9e1102ccc72a6, type: 3}

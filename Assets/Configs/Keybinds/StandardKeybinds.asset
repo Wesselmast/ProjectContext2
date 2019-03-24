@@ -21,4 +21,5 @@ MonoBehaviour:
   quitGame: 27
   removeObject: 114
   placeObject: 32
-  debugSkipLevel: 108
+  debugSkipLevel: 275
+  debugLastLevel: 276

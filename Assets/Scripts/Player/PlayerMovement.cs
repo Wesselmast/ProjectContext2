@@ -24,9 +24,8 @@ public class PlayerMovement : MonoBehaviour {
         ac = GetComponent<FMODUnity.StudioEventEmitter>();
         transform.eulerAngles = new Vector3(door.eulerAngles.x, door.eulerAngles.y + 90, door.eulerAngles.z);
         transform.position = door.position;
-        WingDetection[] temp = FindObjectsOfType<WingDetection>();
-        self = temp[0];
-        gun = temp[1];
+        self = GameObject.Find("Col").GetComponent<WingDetection>();
+        gun = GameObject.Find("Weapon").GetComponent<WingDetection>();
     }
 
     private void OnEnable() {

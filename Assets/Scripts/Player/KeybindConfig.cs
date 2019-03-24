@@ -22,4 +22,6 @@ public class KeybindConfig : ScriptableObject {
     public KeyCode PlaceObject { get { return placeObject; } }
     [SerializeField] private KeyCode debugSkipLevel;
     public KeyCode DebugSkipLevel { get { return debugSkipLevel; } }
+    [SerializeField] private KeyCode debugLastLevel;
+    public KeyCode DebugLastLevel { get { return debugLastLevel; } }
 }

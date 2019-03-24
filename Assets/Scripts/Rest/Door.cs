@@ -23,7 +23,7 @@ public class Door : MonoBehaviour {
         player = FindObjectOfType<ContextInput.PlayerInput>().gameObject;
         try { fader = GameObject.Find("Fader").GetComponent<Animator>(); }
         catch { }
-        weapon = player.transform.GetChild(0).GetChild(0).gameObject;
+        weapon = GameObject.Find("Weapon");
         placement = player.GetComponent<FurniturePlacement>();
     }
 
@@ -33,7 +33,7 @@ public class Door : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (CompareLists(requiredFurnitureNames, CurrentFurnitures) && FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching())) {
+        if (CompareLists(requiredFurnitureNames, CurrentFurnitures) && FindObjectsOfType<RaycastTargeting>().All(r => r.ObjectIsTouching()) && !isComplete) {
             isComplete = true;
             GunGone = true;
             weapon.SetActive(false);
