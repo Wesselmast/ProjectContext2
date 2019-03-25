@@ -27,11 +27,14 @@ MonoBehaviour:
   - {fileID: 114785521798000270}
   - {fileID: 114528545564415844}
   - {fileID: 114642070772464044}
+  - {fileID: 114112688371467894}
+  - {fileID: 114645313206714250}
+  - {fileID: 114312010439600652}
   MasterBanks:
   - {fileID: 114359809212535086}
   StringsBanks:
   - {fileID: 114136163932848870}
-  stringsBankWriteTime: 636891449831646546
+  stringsBankWriteTime: 636891487030395581
   cacheVersion: 3
 --- !u!114 &114051794416066668
 MonoBehaviour:
@@ -50,6 +53,22 @@ MonoBehaviour:
   Max: 60
   Default: 0
 --- !u!114 &114062574744963810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main menu
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114088238083491706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +139,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 54545
+--- !u!114 &114112688371467894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CrowdStage3
+  guid: 17bfbf1ed8964544af6ca06664cd594e
+  Banks:
+  - {fileID: 114359809212535086}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 17258
 --- !u!114 &114136163932848870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,11 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Build\Desktop\Master Bank.strings.bank
-  lastModified: 636891449831646546
+  lastModified: 636891487030395581
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1182
+    Value: 1300
   Exists: 1
 --- !u!114 &114145127852327078
 MonoBehaviour:
@@ -230,7 +272,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114251803628815438}
+  - {fileID: 114733910582016812}
   MinDistance: 0
   MaxDistance: 0
   Length: 104727
@@ -266,6 +308,29 @@ MonoBehaviour:
   Min: 0
   Max: 60
   Default: 0
+--- !u!114 &114312010439600652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CrowdStage1
+  guid: d52a4730dbcad740a2deb0bb9a01cceb
+  Banks:
+  - {fileID: 114359809212535086}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 17250
 --- !u!114 &114359809212535086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,11 +345,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Wessel\Desktop\Github School\ProjectContext2\Build\Desktop\Master
     Bank.bank
-  lastModified: 636891449831536842
+  lastModified: 636891487030345723
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 12709024
+    Value: 13005920
   Exists: 1
 --- !u!114 &114384549874851830
 MonoBehaviour:
@@ -494,6 +559,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 57750
+--- !u!114 &114645313206714250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CrowdStage2
+  guid: 93e91580f1c5e5438bd5ee07898f6c3a
+  Banks:
+  - {fileID: 114359809212535086}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 17250
 --- !u!114 &114648139127969540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,10 +637,26 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114581950090201914}
+  - {fileID: 114088238083491706}
   MinDistance: 0
   MaxDistance: 0
   Length: 117818
+--- !u!114 &114733910582016812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Time passed
+  Min: 0
+  Max: 60
+  Default: 0
 --- !u!114 &114747142965554032
 MonoBehaviour:
   m_ObjectHideFlags: 0
