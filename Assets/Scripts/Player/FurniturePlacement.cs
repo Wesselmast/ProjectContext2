@@ -6,6 +6,7 @@ public class FurniturePlacement : MonoBehaviour {
     public Material Original { get; set; }
     [SerializeField] private Material blueprintMat;
     [SerializeField] private Material disabledMat;
+    [SerializeField] private GameObject placementSprite;
 
     private Grid grid;
     private FurnitureCollisionManager manager;
@@ -25,9 +26,17 @@ public class FurniturePlacement : MonoBehaviour {
                     CostText.CurrentMaterial -= obj.GetComponent<Furniture>().Cost;
                     Door.CurrentFurnitures.Add(obj.GetComponent<Furniture>().CustomName);
                     Destroy(Furniture);
+                    if (placementSprite == null) return;
+                    placementSprite.SetActive(false);
+                }
+                else if (placementSprite != null) {
+                    placementSprite.SetActive(true);
+                    return;
                 }
             }
             else Furniture.GetComponent<Furniture>().ChangeMaterial(disabledMat);
         }
+        if (placementSprite == null) return;
+        placementSprite.SetActive(false);
     }
 }

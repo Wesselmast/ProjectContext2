@@ -7,9 +7,10 @@ public class Countdown : MonoBehaviour {
 
     private float elapsed = 0;
 
-    void Update() {
+    private void Update() {
         if (elapsed > amtOfTimeInSeconds) {
-            SceneManager.LoadScene("Ending");
+            if(SceneManager.GetActiveScene().name == "Level 4.1") SceneManager.LoadScene("Ending");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else elapsed += Time.deltaTime;
     }

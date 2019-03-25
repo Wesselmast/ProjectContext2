@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevelKey: 32
-  nextLevel: Level T1
+  nextLevel: IntroCutscene
 --- !u!1001 &1282473018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2087,6 +2087,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1174505481}
     m_Modifications:
+    - target: {fileID: 220777436208779783, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
+        type: 3}
+      propertyPath: m_Name
+      value: Fader
+      objectReference: {fileID: 0}
     - target: {fileID: 220777436208779779, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2191,11 +2196,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 220777436208779783, guid: 447fd3d2d30eb3d468b2a6343ec5af92,
-        type: 3}
-      propertyPath: m_Name
-      value: Fader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 447fd3d2d30eb3d468b2a6343ec5af92, type: 3}
