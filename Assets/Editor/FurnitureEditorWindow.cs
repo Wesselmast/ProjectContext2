@@ -10,8 +10,8 @@ public class FurnitureEditorWindow : EditorWindow {
     private int positionCount;
     private const int guiOffset = 25;
     private string furnitureName = "Default";
-    private GameObject obj;
-    private GameObject mesh;
+    private GameObject mainObject;
+    private GameObject meshObject;
 
     private bool hasTarget = false;
 
@@ -26,7 +26,7 @@ public class FurnitureEditorWindow : EditorWindow {
         positionCount = 1;
         GUI.Label(new Rect(3, 3, position.width - 6, 20), "Welcome to the furniture editor!", EditorStyles.boldLabel);
         furnitureName = EditorGUI.TextField(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Name: ", furnitureName);
-        mesh = (GameObject)EditorGUI.ObjectField(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Mesh: ", mesh, typeof(GameObject), false);
+        meshObject = (GameObject)EditorGUI.ObjectField(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Mesh: ", meshObject, typeof(GameObject), false);
         furnitureSettings = (FurnitureSettings)EditorGUI.ObjectField(new Rect(3, guiOffset * positionCount++, position.width - 6, 20),
                                                            "Furniture Settings", furnitureSettings, typeof(FurnitureSettings), false);
         hasTarget = EditorGUI.Toggle(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Has a target", hasTarget);
@@ -35,79 +35,90 @@ public class FurnitureEditorWindow : EditorWindow {
                                                        "Target To Hit: ", target, typeof(Furniture), false);
         }
 
-        if (mesh != null) {
-            if (GUI.Button(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Create Furniture")) {
-                string localPath = "Assets/Prefabs/Furnitures/" + furnitureName + ".prefab";
-                if (AssetDatabase.LoadAssetAtPath(localPath, typeof(GameObject))) {
-                    if (EditorUtility.DisplayDialog("Are you sure?",
-                        "This Prefab Furniture already exists. Do you want to overwrite it?",
-                        "Yes",
-                        "No")) {
-                        InitObject();
-                        GameObject prefab = PrefabUtility.SaveAsPrefabAsset(obj, localPath);
-                        DestroyImmediate(obj);
-                        OpenWindow();
-                    }
-                }
-                else {
-                    InitObject();
-                    GameObject prefab = PrefabUtility.SaveAsPrefabAsset(obj, localPath);
-                    DestroyImmediate(obj);
-                    OpenWindow();
-                }
+        if (meshObject == null) return;
+
+        if (GUI.Button(new Rect(3, guiOffset * positionCount++, position.width - 6, 20), "Create Furniture")) {
+            string localPath = "Assets/Prefabs/Furnitures/" + furnitureName + ".prefab";
+            if (AssetDatabase.LoadAssetAtPath(localPath, typeof(GameObject))) {
+                if (!EditorUtility.DisplayDialog("Are you sure?",
+                    "This Prefab Furniture already exists. Do you want to overwrite it?",
+                    "Yes",
+                    "No")) return;
+            }
+            else {
+                InitObject();
+                GameObject prefab = PrefabUtility.SaveAsPrefabAsset(mainObject, localPath);
+                DestroyImmediate(mainObject);
+                OpenWindow();
             }
         }
     }
 
     private void InitObject() {
-        obj = new GameObject(furnitureName);
-        mesh = Instantiate(mesh);
-        mesh.transform.parent = obj.transform;
-        GameObject cols = new GameObject("Colliders");
-        if (hasTarget) SetupRaycasting();
-        Furniture furniture = obj.AddComponent<Furniture>();
+        mainObject = new GameObject(furnitureName);
+        Furniture furniture = mainObject.AddComponent<Furniture>();
         furniture.Settings = furnitureSettings;
-        cols.AddComponent<FurnitureCollisionManager>();
-        GameObject col = new GameObject("Collider");
-        col.AddComponent<FurnitureCollider>();
-        col.layer = LayerMask.NameToLayer("Walls");
-        col.tag = "FurnitureBlueprint";
-        BoxCollider box = col.AddComponent<BoxCollider>();
-        box.size = new Vector3(0.75f, 0.75f, 0.75f);
-        box.isTrigger = true;
+        meshObject = Instantiate(meshObject);
+        meshObject.transform.parent = mainObject.transform;
+        SetupColliders();
+        if (hasTarget) SetupRaycasting();
+    }
+
+    private void SetupColliders() {
+        GameObject collidersObject = new GameObject("Colliders");
+        collidersObject.AddComponent<FurnitureCollisionManager>();
+        CreateColliderObject().transform.parent = collidersObject.transform;
+        CreateCrossGroup().transform.parent = collidersObject.transform;
+        collidersObject.transform.parent = mainObject.transform;
+    }
+
+    private GameObject CreateCrossGroup() {
         GameObject crossGroup = new GameObject("Crossgroup");
         crossGroup.AddComponent<CrossHandler>();
-        GameObject cross = (GameObject)Resources.Load("Icons/NotPlaceable", typeof(GameObject));
-        GameObject notPlaceablePrefab = (GameObject)PrefabUtility.InstantiatePrefab(cross);
-        cols.transform.parent = obj.transform;
-        col.transform.parent = cols.transform;
-        crossGroup.transform.parent = cols.transform;
-        notPlaceablePrefab.transform.parent = crossGroup.transform;
+        GameObject crossPrefab = (GameObject)Resources.Load("Icons/NotPlaceable", typeof(GameObject));
+        ((GameObject)PrefabUtility.InstantiatePrefab(crossPrefab)).transform.parent = crossGroup.transform;
+        return crossGroup;
+    }
+
+    private GameObject CreateColliderObject() {
+        GameObject colliderObject = new GameObject("Collider");
+        colliderObject.AddComponent<FurnitureCollider>();
+        colliderObject.layer = LayerMask.NameToLayer("Walls");
+        colliderObject.tag = "FurnitureBlueprint";
+        BoxCollider boxCollider = colliderObject.AddComponent<BoxCollider>();
+        boxCollider.size = new Vector3(0.75f, 0.75f, 0.75f);
+        boxCollider.isTrigger = true;
+        return colliderObject;
     }
 
     private void SetupRaycasting() {
-        GameObject rays = new GameObject("RaycastForObject");
-        GameObject rayBox = new GameObject("RayBox");
-        rayBox.layer = LayerMask.NameToLayer("Walls");
-        rayBox.tag = "FurnitureBlueprint";
-        MeshFilter filter = rayBox.AddComponent<MeshFilter>();
-        MeshRenderer ren = rayBox.AddComponent<MeshRenderer>();
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        filter.sharedMesh = cube.GetComponent<MeshFilter>().sharedMesh;
-        ren.sharedMaterial = cube.GetComponent<MeshRenderer>().sharedMaterial;
-        DestroyImmediate(cube);
-        rayBox.AddComponent<WingDetection>();
-        GameObject notLinked = (GameObject)Resources.Load("Icons/NotLinked", typeof(GameObject));
-        GameObject notCompletedPrefab = (GameObject)PrefabUtility.InstantiatePrefab(notLinked);
-        notCompletedPrefab.transform.parent = rays.transform;
-        GameObject linked = (GameObject)Resources.Load("Icons/Linked", typeof(GameObject));
-        GameObject completedPrefab = (GameObject)PrefabUtility.InstantiatePrefab(linked);
-        completedPrefab.transform.parent = rays.transform;
-        RaycastTargeting rt = rays.AddComponent<RaycastTargeting>();
-        rt.Target = target;
-        rt.NotDone = notCompletedPrefab;
-        rt.Done = completedPrefab;
-        rayBox.transform.parent = rays.transform;
-        rays.transform.parent = obj.transform;
+        GameObject raycastForObject = new GameObject("RaycastForObject");
+        GameObject rayBoxObject = CreateRayBox();
+        GameObject notLinkedIcon = CreateIcon("Icons/NotLinked");
+        GameObject linkedIcon = CreateIcon("Icons/Linked");
+        RaycastTargeting raycastTargeting = raycastForObject.AddComponent<RaycastTargeting>();
+        raycastTargeting = SetupRaycastTargeting(notLinkedIcon, linkedIcon);
+        notLinkedIcon.transform.parent = raycastForObject.transform;
+        linkedIcon.transform.parent = raycastForObject.transform;
+        rayBoxObject.transform.parent = raycastForObject.transform;
+        raycastForObject.transform.parent = mainObject.transform;
+    }
+
+    private GameObject CreateRayBox() {
+        GameObject rayBoxPrefab = (GameObject)Resources.Load("Prefabs/RayBox", typeof(GameObject));
+        return (GameObject)PrefabUtility.InstantiatePrefab(rayBoxPrefab);
+    }
+
+    private RaycastTargeting SetupRaycastTargeting(GameObject notLinkedIcon, GameObject linkedIcon) {
+        return new RaycastTargeting {
+            Target = target,
+            NotLinked = notLinkedIcon,
+            Linked = linkedIcon
+        };
+    }
+
+    private GameObject CreateIcon(string path) {
+        GameObject iconPrefab = (GameObject)Resources.Load(path, typeof(GameObject));
+        return (GameObject)PrefabUtility.InstantiatePrefab(iconPrefab);
     }
 }

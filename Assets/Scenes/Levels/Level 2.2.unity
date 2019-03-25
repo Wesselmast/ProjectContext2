@@ -29849,6 +29849,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 894029658, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 802060131, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
 --- !u!114 &1805420659 stripped
@@ -32692,6 +32700,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 203933111}
     m_Modifications:
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Cross
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8470169656104347108, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32747,22 +32765,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Name
-      value: Cross
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 861240984717572073, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10

@@ -33221,6 +33221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 794756259, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7df94cc22f5191e4683f090bedc783a7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
 --- !u!114 &1870111591 stripped
@@ -36303,17 +36307,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1605860367}
+    - target: {fileID: 9071179479727018733, guid: 7ab0664193efae244ad9e1102ccc72a6,
+        type: 3}
+      propertyPath: near clip plane
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9071179479727018731, guid: 7ab0664193efae244ad9e1102ccc72a6,
         type: 3}
       propertyPath: profile
       value: 
       objectReference: {fileID: 11400000, guid: 12e11e629be423a4f95878b7256d53b1,
         type: 2}
-    - target: {fileID: 9071179479727018733, guid: 7ab0664193efae244ad9e1102ccc72a6,
-        type: 3}
-      propertyPath: near clip plane
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0664193efae244ad9e1102ccc72a6, type: 3}
 --- !u!1001 &2041146345
@@ -37637,6 +37641,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 681822856}
     m_Modifications:
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Cross
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8470169656104347108, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37692,22 +37706,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Name
-      value: Cross
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 861240984717572073, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10

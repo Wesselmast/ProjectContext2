@@ -15,7 +15,7 @@ public class RaycastTargeting : MonoBehaviour {
         }
     }
 
-    public GameObject NotDone {
+    public GameObject NotLinked {
         get {
             return animatedCross;
         }
@@ -23,7 +23,7 @@ public class RaycastTargeting : MonoBehaviour {
             animatedCross = value;
         }
     }
-    public GameObject Done {
+    public GameObject Linked {
         get {
             return animatedDone;
         }

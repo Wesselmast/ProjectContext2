@@ -14642,8 +14642,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.780171, b: 0.2783019, a: 1}
-  m_Intensity: 3.5
-  m_Range: 4.5
+  m_Intensity: 5.5
+  m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -14677,7 +14677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329108728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.77, y: 18.34, z: -1.62}
+  m_LocalPosition: {x: -0.77, y: 19.48, z: -1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80401,6 +80401,14 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 773657521, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 802060131, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1827954c8bdbbce43b56925586722f73, type: 3}
 --- !u!114 &1870111591 stripped
@@ -89851,6 +89859,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 681822856}
     m_Modifications:
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Cross
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8470169656104347108, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -89906,22 +89924,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Name
-      value: Cross
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344025770658677669, guid: 82ba1706017f0cf44a68e6475148b3be,
+    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 861240984717572073, guid: 82ba1706017f0cf44a68e6475148b3be,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3461298017474179644, guid: 82ba1706017f0cf44a68e6475148b3be,
         type: 3}
       propertyPath: m_Layer
       value: 10

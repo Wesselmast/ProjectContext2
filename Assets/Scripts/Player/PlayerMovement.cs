@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] private bool moveLocal;
     [SerializeField] private float speed;
-    [SerializeField] private Animator characterAnimator;
+    private Animator characterAnimator;
     private Animator glowLeft;
     private Animator glowRight;
     private Animator glowTop;
@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.position = door.position;
         self = GameObject.Find("Col").GetComponent<WingDetection>();
         gun = GameObject.Find("Weapon").GetComponent<WingDetection>();
+        characterAnimator = GameObject.Find("Art").GetComponentInChildren<Animator>();
     }
 
     private void OnEnable() {
