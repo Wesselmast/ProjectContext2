@@ -2,6 +2,7 @@
 
 public class MusicDestroyer : MonoBehaviour {
     private void Awake() {
-        MusicPlayer.ResetMusic();
+        try { MusicPlayer.ResetMusic(); }
+        catch { }
     }
 }
