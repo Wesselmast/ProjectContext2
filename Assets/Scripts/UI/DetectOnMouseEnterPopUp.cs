@@ -9,6 +9,6 @@ public class DetectOnMouseEnterPopUp : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        anim.SetBool("Highlighted2", false);
+        //anim.SetBool("Normal", true);
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{0455270c-2e74-4613-a8df-e7be9400cabe}">
+        <property name="assetPath">
+            <value>AllCharacterVoices/VO 5 Tantum.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>13.125</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{361f326d-ea81-4bbf-92d9-ee2969218598}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{7eb06303-e752-4ee5-8048-10c7d5ff7fc4}">
+        <property name="assetPath">
+            <value>AllCharacterVoices/VO 12 Amare.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>21</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{361f326d-ea81-4bbf-92d9-ee2969218598}</destination>
+        </relationship>
+    </object>
+</objects>
