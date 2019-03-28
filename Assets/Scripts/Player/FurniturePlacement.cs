@@ -10,15 +10,18 @@ public class FurniturePlacement : MonoBehaviour {
 
     private Grid grid;
     private FurnitureCollisionManager manager;
+    private PlayerMovement movement;
 
     private void Awake() {
         grid = FindObjectOfType<Grid>();
+        movement = GetComponent<PlayerMovement>();
     }
 
     private void Update() {
         if (Furniture != null) {
             if (!Furniture.GetComponentInChildren<FurnitureCollisionManager>().AnyColliderTriggered && 
-                               CostText.CurrentMaterial >= Furniture.GetComponent<Furniture>().Cost) {
+                               CostText.CurrentMaterial >= Furniture.GetComponent<Furniture>().Cost &&
+                               !movement.CoroutineRunning) {
                 Furniture.GetComponent<Furniture>().ChangeMaterial(blueprintMat);
                 if (PlayerInput.Place) {
                     GameObject obj = Instantiate(Furniture, Furniture.transform.position, Furniture.transform.rotation);

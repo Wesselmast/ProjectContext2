@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+    public bool CoroutineRunning = false;
 
     [SerializeField] private bool moveLocal;
     [SerializeField] private float speed;
@@ -17,7 +18,6 @@ public class PlayerMovement : MonoBehaviour {
     private Transform door;
 
     private FMODUnity.StudioEventEmitter ac;
-    private bool coroutineRunning = false;
 
     private void Awake() {
         glowLeft = GameObject.Find("SideGlowLeft").GetComponent<Animator>();
@@ -63,10 +63,10 @@ public class PlayerMovement : MonoBehaviour {
     private void CheckHowToMove(bool gun, bool self, Vector3 direction) {
         Vector3 prevPosition = transform.position;
         if (!Door.GunGone) {
-            if (gun && self && !coroutineRunning) if (!coroutineRunning) StartCoroutine(MoveToLocation(direction));
+            if (gun && self && !CoroutineRunning) if (!CoroutineRunning) StartCoroutine(MoveToLocation(direction));
         }
-        else if (self) if(!coroutineRunning) StartCoroutine(MoveToLocation(direction));
-        if (prevPosition == transform.position && !coroutineRunning) {
+        else if (self) if(!CoroutineRunning) StartCoroutine(MoveToLocation(direction));
+        if (prevPosition == transform.position && !CoroutineRunning) {
             try { ac.Play(); }
             catch { }
             if (direction == transform.right) glowTop.Play("SideGlowNew");
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private IEnumerator MoveToLocation(Vector3 direction) {
-        coroutineRunning = true;
+        CoroutineRunning = true;
         if (direction == transform.right) characterAnimator.SetBool("doWalkForwards", true);
         else if (direction == -transform.right) characterAnimator.SetBool("doWalkBackwards", true);
         else if (direction == -transform.forward) characterAnimator.SetBool("doWalkRight", true);
@@ -95,6 +95,6 @@ public class PlayerMovement : MonoBehaviour {
         characterAnimator.SetBool("doWalkBackwards", false);
         characterAnimator.SetBool("doWalkRight", false);
         characterAnimator.SetBool("doWalkLeft", false);
-        coroutineRunning = false;
+        CoroutineRunning = false;
     }
 }

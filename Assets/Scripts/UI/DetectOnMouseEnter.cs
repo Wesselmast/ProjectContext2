@@ -21,6 +21,12 @@ public class DetectOnMouseEnter : MonoBehaviour, IPointerEnterHandler
 
     [SerializeField] private Animator anim_Scrollbar;
 
+    private Animator gun;
+
+
+    private void Awake() {
+        gun = GameObject.Find("PLAYERGUN").GetComponent<Animator>();
+    }
 
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -31,6 +37,8 @@ public class DetectOnMouseEnter : MonoBehaviour, IPointerEnterHandler
             buttons[i].SetBool("IsEntered", true);
             buttonsShadow[i].SetBool("IsEntered", true);
         }
+
+        gun.SetBool("IsEntered", true);
 
         anim.SetBool("IsEntered", true);
 

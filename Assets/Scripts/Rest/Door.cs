@@ -37,6 +37,7 @@ public class Door : MonoBehaviour {
             isComplete = true;
             GunGone = true;
             weapon.SetActive(false);
+            GameObject.Find("WeaponSpot").SetActive(false);
             arrow.SetActive(true);
             placement.enabled = false;
         }
@@ -82,6 +83,7 @@ public class Door : MonoBehaviour {
     private IEnumerator FadeOut() {
         fader.Play("FadeOut");
         yield return new WaitForSeconds(0.9f);
+        if (SceneManager.GetActiveScene().name == "Level 1.3") MusicPlayer.ResetMusic();
         try { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
         catch {
             Debug.LogError("NO MORE SCENES IN BUILD!");

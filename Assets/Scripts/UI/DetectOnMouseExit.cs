@@ -19,7 +19,13 @@ public class DetectOnMouseExit : MonoBehaviour, IPointerEnterHandler
     [SerializeField] private Animator anim_ButtonShadowRetry;
 
     [SerializeField] private Animator anim_Scrollbar;
-    
+
+    private Animator gun;
+
+
+    private void Awake() {
+        gun = GameObject.Find("PLAYERGUN").GetComponent<Animator>();
+    }
 
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -29,6 +35,8 @@ public class DetectOnMouseExit : MonoBehaviour, IPointerEnterHandler
             buttons[i].SetBool("IsEntered", false);
             buttonsShadow[i].SetBool("IsEntered", false);
         }
+
+        gun.SetBool("IsEntered", false);
 
         anim.SetBool("IsEntered", false);
 

@@ -15,4 +15,4 @@ MonoBehaviour:
   requiredFurnitures:
   - {fileID: 4637408600092269503, guid: b8971d9355482834d896982a490e73ec, type: 3}
   - {fileID: 7755508361888881668, guid: 98f454949b1efff45a63c237b84a9b12, type: 3}
-  - {fileID: 1841749559139881764, guid: b5a2b2ca94c03894d94f7fa93a28fb9b, type: 3}
+  - {fileID: 7755508361888881668, guid: 3967a66406703d349b26f9a6aaed645f, type: 3}
