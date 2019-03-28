@@ -5099,6 +5099,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1223412458, guid: 1db30962ce235b44491f10585d5aab65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8352844042383213307, guid: 1db30962ce235b44491f10585d5aab65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1db30962ce235b44491f10585d5aab65, type: 3}
@@ -33795,6 +33799,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.19874789
+      objectReference: {fileID: 0}
     - target: {fileID: 5324303392919021149, guid: 1827954c8bdbbce43b56925586722f73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33959,21 +33978,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 072fbc3ee0f85794abe9b26858a5938d, type: 2}
-    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.428
-      objectReference: {fileID: 0}
-    - target: {fileID: 527710477317750782, guid: 1827954c8bdbbce43b56925586722f73,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.19874789
-      objectReference: {fileID: 0}
     - target: {fileID: 8282326656457426137, guid: 1827954c8bdbbce43b56925586722f73,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

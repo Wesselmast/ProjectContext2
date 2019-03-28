@@ -43,13 +43,31 @@ MonoBehaviour:
   - {fileID: 114754520593140172}
   - {fileID: 114611498725513280}
   - {fileID: 114178435521554662}
+  - {fileID: 114129856967857270}
+  - {fileID: 114342490938134174}
   MasterBanks:
   - {fileID: 114359809212535086}
   StringsBanks:
   - {fileID: 114136163932848870}
-  stringsBankWriteTime: 636893189795677654
+  stringsBankWriteTime: 636893665812339282
   cacheVersion: 3
 --- !u!114 &114026491927213870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main menu
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114027565177054838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,6 +154,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114089329725319156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Time passed
+  Min: 0
+  Max: 60
+  Default: 0
 --- !u!114 &114092138284949304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +248,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 17258
+--- !u!114 &114129856967857270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Up
+  guid: 2994c825a4c8d44cb024a2756905e8b7
+  Banks:
+  - {fileID: 114359809212535086}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 937
 --- !u!114 &114136163932848870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,11 +284,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Build\Desktop\Master Bank.strings.bank
-  lastModified: 636893189795677654
+  lastModified: 636893665812339282
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1802
+    Value: 1870
   Exists: 1
 --- !u!114 &114145127852327078
 MonoBehaviour:
@@ -347,7 +404,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114273327792496590}
+  - {fileID: 114089329725319156}
   MinDistance: 0
   MaxDistance: 0
   Length: 104727
@@ -514,6 +571,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 17250
+--- !u!114 &114342490938134174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Down
+  guid: 8c3290a5210b9144afbb4ad65f3a10ae
+  Banks:
+  - {fileID: 114359809212535086}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 937
 --- !u!114 &114359809212535086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,11 +608,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Wessel\Desktop\Github School\ProjectContext2\Build\Desktop\Master
     Bank.bank
-  lastModified: 636893189795558316
+  lastModified: 636893665812299668
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 16105472
+    Value: 16126656
   Exists: 1
 --- !u!114 &114384549874851830
 MonoBehaviour:
@@ -921,7 +1001,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114613538996686934}
+  - {fileID: 114027565177054838}
   MinDistance: 0
   MaxDistance: 0
   Length: 117818
@@ -1058,6 +1138,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114819449432129114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Main menu
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114828760503932096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,6 +1273,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114897101629101472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Time passed
+  Min: 0
+  Max: 60
+  Default: 0
 --- !u!114 &114912153235899992
 MonoBehaviour:
   m_ObjectHideFlags: 0
